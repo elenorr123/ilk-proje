@@ -839,44 +839,44 @@
     <div class="grid md:grid-cols-3 gap-gutter">
 
       <!-- Post 1 -->
-      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform cursor-pointer" onclick="location.href='blog-klaviyo-sepet-terk.html'">
         <div class="h-48 border-b-4 border-primary relative overflow-hidden">
           <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80" alt="Mail Marketing" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Mail Marketing</div>
         </div>
         <div class="p-6">
           <p class="text-xs text-on-surface-variant font-label-bold mb-2">5 Haz 2025 · 4 dk okuma</p>
-          <h3 class="font-headline-md mb-3 leading-snug">Klaviyo'da Sepet Terk Akışını Nasıl Kuruyorum?</h3>
+          <h3 class="font-headline-md mb-3 leading-snug group-hover:text-secondary transition-colors">Klaviyo'da Sepet Terk Akışını Nasıl Kuruyorum?</h3>
           <p class="font-body-md text-on-surface-variant text-sm mb-4">Türkiye'deki e-ticaret sitelerinin %80'i bu akışı hiç kurmamış. İşte adım adım kurulum rehberi.</p>
-          <a href="blog-klaviyo-sepet-terk.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+          <span class="font-label-bold text-secondary">Okumaya devam et →</span>
         </div>
       </article>
 
       <!-- Post 2 -->
-      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform cursor-pointer" onclick="location.href='blog-meta-kreatif-test.html'">
         <div class="h-48 border-b-4 border-primary relative overflow-hidden">
           <img src="https://images.unsplash.com/photo-1655199798153-a8f56d8655d2?w=800&q=80" alt="Meta Ads" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Meta Ads</div>
         </div>
         <div class="p-6">
           <p class="text-xs text-on-surface-variant font-label-bold mb-2">28 May 2025 · 6 dk okuma</p>
-          <h3 class="font-headline-md mb-3 leading-snug">Meta'da Kreatif Test Etmeden Para Yakıyorsunuz</h3>
+          <h3 class="font-headline-md mb-3 leading-snug group-hover:text-secondary transition-colors">Meta'da Kreatif Test Etmeden Para Yakıyorsunuz</h3>
           <p class="font-body-md text-on-surface-variant text-sm mb-4">Çoğu işletme tek bir kreatifle kampanya yürütüyor. A/B testiyle ROAS'ı nasıl 3x artırırsınız?</p>
-          <a href="blog-meta-kreatif-test.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+          <span class="font-label-bold text-secondary">Okumaya devam et →</span>
         </div>
       </article>
 
       <!-- Post 3 -->
-      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform cursor-pointer" onclick="location.href='blog-ga4-gtm-kurulum.html'">
         <div class="h-48 border-b-4 border-primary relative overflow-hidden">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
           <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Takip & Analitik</div>
         </div>
         <div class="p-6">
           <p class="text-xs text-on-surface-variant font-label-bold mb-2">15 May 2025 · 5 dk okuma</p>
-          <h3 class="font-headline-md mb-3 leading-snug">GA4 + GTM Kurulmadan Reklam Vermek Kör Uçmak</h3>
+          <h3 class="font-headline-md mb-3 leading-snug group-hover:text-secondary transition-colors">GA4 + GTM Kurulmadan Reklam Vermek Kör Uçmak</h3>
           <p class="font-body-md text-on-surface-variant text-sm mb-4">Conversion tracking olmadan hangi reklamın sattığını bilemezsiniz. İşte doğru kurulum nasıl yapılır.</p>
-          <a href="blog-ga4-gtm-kurulum.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+          <span class="font-label-bold text-secondary">Okumaya devam et →</span>
         </div>
       </article>
 
@@ -1122,11 +1122,7 @@
   // Meeting Form submit
   document.getElementById('meeting-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Talebiniz Alındı! 24 saat içinde dönüyorum.';
-    btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
-    btn.classList.add('bg-primary', 'text-white');
-    btn.disabled = true;
+    window.location.href = 'tesekkurler.html';
   });
 
   // Contact Form submit (placeholder)

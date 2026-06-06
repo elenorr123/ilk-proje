@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="light" lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teşekkürler | Mert Esmer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#f9f9ff", "primary-container": "#131b2e",
+          "secondary": "#006e2f", "background": "#f9f9ff",
+          "on-background": "#111c2d", "on-surface": "#111c2d",
+          "secondary-fixed": "#6bff8f", "on-secondary-fixed": "#002109",
+          "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d",
+          "primary": "#000000", "on-primary-container": "#7c839b",
+        },
+        fontFamily: { "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-bold": ["Hanken Grotesk"], "display": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"] },
+        fontSize: {
+          "body-lg": ["20px", {lineHeight:"1.6", fontWeight:"500"}],
+          "body-md": ["16px", {lineHeight:"1.5", fontWeight:"400"}],
+          "label-bold": ["14px", {lineHeight:"1.2", fontWeight:"700"}],
+          "headline-lg": ["48px", {lineHeight:"1.2", fontWeight:"800"}],
+          "headline-md": ["32px", {lineHeight:"1.3", fontWeight:"700"}],
+        },
+        spacing: { "margin-desktop": "64px", "margin-mobile": "20px" }
+      }
+    }
+  }
+</script>
+<style>
+  .neo-brutal-shadow { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+  .neo-brutal-shadow-lg { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); }
+  .grid-pattern {
+    background-image: radial-gradient(#111c2d 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    background-color: #f9f9ff;
+  }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  @keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .pop-in { animation: popIn 0.5s ease forwards; }
+</style>
+</head>
+<body class="font-body-md text-on-background bg-background">
+
+<!-- Nav -->
+<header class="bg-surface-bright sticky top-0 z-50 border-b-4 border-primary neo-brutal-shadow">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1200px] mx-auto">
+    <a class="font-display text-headline-md font-black text-primary" href="index.html">Mert Esmer</a>
+  </div>
+</header>
+
+<!-- Teşekkür -->
+<main class="grid-pattern min-h-screen flex items-center justify-center px-margin-mobile py-20">
+  <div class="max-w-lg w-full text-center">
+
+    <!-- İkon -->
+    <div class="pop-in w-24 h-24 bg-secondary-fixed border-4 border-primary neo-brutal-shadow-lg mx-auto flex items-center justify-center mb-8">
+      <span class="material-symbols-outlined text-primary" style="font-size:48px;font-variation-settings:'FILL' 1;">check_circle</span>
+    </div>
+
+    <!-- Başlık -->
+    <div class="bg-white border-4 border-primary neo-brutal-shadow-lg p-10">
+      <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed mb-6">ALINDI ✓</div>
+      <h1 class="font-headline-lg text-primary mb-4">Teşekkürler!</h1>
+      <p class="font-body-lg text-on-surface-variant mb-8">
+        Talebiniz bana ulaştı. En kısa sürede sizinle iletişime geçeceğim.
+      </p>
+
+      <div class="border-t-2 border-outline-variant pt-6 mb-8 space-y-3">
+        <div class="flex items-center gap-3 text-left">
+          <span class="material-symbols-outlined text-secondary flex-shrink-0" style="font-variation-settings:'FILL' 1;">notifications_active</span>
+          <span class="font-body-md text-on-surface-variant">Telefon veya e-posta yoluyla dönüş yapılacak.</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="index.html" class="flex-1 py-3 border-4 border-primary font-label-bold neo-brutal-shadow hover:bg-secondary-fixed transition-colors text-center">
+          ← Ana Sayfaya Dön
+        </a>
+        <a href="blog.html" class="flex-1 py-3 bg-primary text-white border-4 border-primary font-label-bold neo-brutal-shadow hover:bg-on-surface transition-colors text-center">
+          Yazılarımı İncele
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
