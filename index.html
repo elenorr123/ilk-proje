@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html class="light" lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mert Esmer | Reklamlarınız Birer Büyüme Makinesine Dönüşsün</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#f9f9ff",
+          "error": "#ba1a1a",
+          "on-primary-container": "#7c839b",
+          "outline": "#76777d",
+          "tertiary": "#000000",
+          "primary-container": "#131b2e",
+          "surface-container-lowest": "#ffffff",
+          "secondary": "#006e2f",
+          "surface": "#f9f9ff",
+          "background": "#f9f9ff",
+          "on-error-container": "#93000a",
+          "on-background": "#111c2d",
+          "primary-fixed-dim": "#bec6e0",
+          "on-tertiary-fixed-variant": "#3e4943",
+          "inverse-on-surface": "#ecf1ff",
+          "on-primary-fixed-variant": "#3f465c",
+          "primary-fixed": "#dae2fd",
+          "on-surface": "#111c2d",
+          "surface-container-high": "#dee8ff",
+          "error-container": "#ffdad6",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed": "#002109",
+          "on-primary-fixed": "#131b2e",
+          "inverse-primary": "#bec6e0",
+          "on-primary": "#ffffff",
+          "surface-tint": "#565e74",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#005321",
+          "primary": "#000000",
+          "tertiary-fixed": "#d9e6dd",
+          "secondary-container": "#6bff8f",
+          "on-tertiary-container": "#7a877f",
+          "secondary-fixed": "#6bff8f",
+          "tertiary-fixed-dim": "#bdcac1",
+          "on-secondary-container": "#007432",
+          "inverse-surface": "#263143",
+          "surface-dim": "#cfdaf2",
+          "outline-variant": "#c6c6cd",
+          "surface-variant": "#d8e3fb",
+          "surface-container-highest": "#d8e3fb",
+          "on-surface-variant": "#45464d",
+          "surface-container": "#e7eeff",
+          "secondary-fixed-dim": "#4ae176",
+          "on-secondary": "#ffffff",
+          "tertiary-container": "#131e19",
+          "surface-container-low": "#f0f3ff",
+          "on-tertiary-fixed": "#131e19"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"
+        },
+        spacing: {
+          "margin-desktop": "64px", "base": "8px", "stack-md": "32px",
+          "stack-lg": "80px", "stack-sm": "12px", "gutter": "24px", "margin-mobile": "20px"
+        },
+        fontFamily: {
+          "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"],
+          "label-bold": ["Hanken Grotesk"], "display": ["Hanken Grotesk"],
+          "headline-lg": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"],
+          "headline-lg-mobile": ["Hanken Grotesk"]
+        },
+        fontSize: {
+          "body-lg": ["20px", {lineHeight: "1.6", fontWeight: "500"}],
+          "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}],
+          "label-bold": ["14px", {lineHeight: "1.2", fontWeight: "700"}],
+          "display": ["72px", {lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "900"}],
+          "headline-lg": ["48px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800"}],
+          "headline-md": ["32px", {lineHeight: "1.3", fontWeight: "700"}],
+          "headline-lg-mobile": ["36px", {lineHeight: "1.2", fontWeight: "800"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .neo-brutal-shadow { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+  .neo-brutal-shadow-lg { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); }
+  .neo-brutal-btn:active { transform: translate(2px,2px); box-shadow: 2px 2px 0px 0px rgba(0,0,0,1); }
+  .grid-pattern {
+    background-image: radial-gradient(#111c2d 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    background-color: #f9f9ff;
+  }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .ticker-track { display: flex; gap: 48px; animation: ticker 28s linear infinite; white-space: nowrap; }
+  @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-answer.open { max-height: 400px; }
+  .mobile-menu { display: none; }
+  .mobile-menu.open { display: flex; }
+</style>
+</head>
+<body class="font-body-md text-on-background bg-background selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<!-- TopNavBar -->
+<header class="bg-surface-bright sticky top-0 z-50 border-b-4 border-primary neo-brutal-shadow">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1200px] mx-auto">
+    <a class="font-display text-headline-md font-black text-primary" href="#">Mert Esmer</a>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="text-on-surface font-label-bold hover:text-secondary transition-all" href="#problems">Sorunlar</a>
+      <a class="text-on-surface font-label-bold hover:text-secondary transition-all" href="#solutions">Çözümler</a>
+      <a class="text-on-surface font-label-bold hover:text-secondary transition-all" href="#how">Nasıl Çalışır</a>
+      <a class="text-on-surface font-label-bold hover:text-secondary transition-all" href="#results">Sonuçlar</a>
+      <a class="text-on-surface font-label-bold hover:text-secondary transition-all" href="#notlar">Notlar</a>
+      <a href="#contact" class="bg-secondary-fixed text-on-secondary-fixed font-label-bold px-6 py-2 border-2 border-primary neo-brutal-shadow hover:translate-y-[-2px] transition-transform">Ücretsiz Analiz Al</a>
+    </nav>
+    <button id="menu-toggle" class="md:hidden text-primary">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu md:hidden flex-col bg-surface-bright border-t-4 border-primary px-margin-mobile py-6 gap-4">
+    <a class="text-on-surface font-label-bold hover:text-secondary py-2 border-b border-outline-variant" href="#problems">Sorunlar</a>
+    <a class="text-on-surface font-label-bold hover:text-secondary py-2 border-b border-outline-variant" href="#solutions">Çözümler</a>
+    <a class="text-on-surface font-label-bold hover:text-secondary py-2 border-b border-outline-variant" href="#how">Nasıl Çalışır</a>
+    <a class="text-on-surface font-label-bold hover:text-secondary py-2 border-b border-outline-variant" href="#results">Sonuçlar</a>
+    <a class="text-on-surface font-label-bold hover:text-secondary py-2 border-b border-outline-variant" href="#pricing">Paketler</a>
+    <a href="#contact" class="bg-secondary-fixed text-on-secondary-fixed font-label-bold px-6 py-3 border-2 border-primary neo-brutal-shadow text-center mt-2">Ücretsiz Analiz Al</a>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section class="grid-pattern py-stack-lg border-b-4 border-primary overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1 space-y-6">
+      <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed">
+        #1 GROWTH ENGINE
+      </div>
+      <h1 class="font-display text-headline-lg-mobile md:text-display text-primary uppercase">
+        Reklamlarınız Birer <span class="bg-secondary-fixed">Büyüme Makinesine</span> Dönüşsün.
+      </h1>
+      <p class="font-body-lg text-on-surface-variant max-w-xl">
+        Pasif trafiği, veriye dayalı stratejilerle aktif müşterilere dönüştürüyoruz. Performans odaklı yaklaşımımızla ölçeklenin.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="bg-secondary-fixed text-on-secondary-fixed font-headline-md px-8 py-4 border-4 border-primary neo-brutal-shadow-lg neo-brutal-btn transition-all inline-block">
+          Ücretsiz Analiz Al
+        </a>
+        <a href="#results" class="bg-white text-primary font-headline-md px-8 py-4 border-4 border-primary neo-brutal-shadow neo-brutal-btn transition-all inline-block">
+          Sonuçları Gör
+        </a>
+      </div>
+      <div class="flex items-center gap-2 font-label-bold text-on-surface">
+        <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">verified</span>
+        <span>İlk 10 işletme için %30 indirim fırsatı!</span>
+      </div>
+    </div>
+    <div class="flex-1 relative">
+      <div class="border-4 border-primary neo-brutal-shadow-lg rotate-2 hover:rotate-0 transition-transform duration-300 bg-white p-2">
+        <img alt="Mert Esmer" class="w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" style="height:520px;object-position:center 15%;"
+          src="mert.jpg"/>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-primary text-surface-bright p-4 border-2 border-primary neo-brutal-shadow font-label-bold uppercase tracking-tighter">
+        Mert Esmer<br/><span class="text-secondary-fixed">Dijital Pazarlama Uzmanı</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker / Social Proof Bar -->
+<div class="bg-secondary-fixed border-b-4 border-primary py-3 overflow-hidden">
+  <div class="ticker-track">
+    <span class="font-label-bold text-on-secondary-fixed">⚡ 22.43x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">🎯 12x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">📈 8.4x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">💰 %67 CPC Düşüşü</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">🚀 3x Dönüşüm Artışı</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">⚡ 22.43x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">🎯 12x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">📈 8.4x ROAS</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">💰 %67 CPC Düşüşü</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+    <span class="font-label-bold text-on-secondary-fixed">🚀 3x Dönüşüm Artışı</span>
+    <span class="font-label-bold text-on-secondary-fixed">✦</span>
+  </div>
+</div>
+
+<!-- Video Section -->
+<section class="bg-primary-container border-b-4 border-primary py-stack-lg">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-10">
+      <h2 class="font-headline-lg text-surface-bright uppercase">Nasıl <span class="text-secondary-fixed">Sonuç Alıyoruz?</span></h2>
+      <p class="text-on-primary-container font-body-md mt-3">Mert, yaklaşımını kendisi anlatıyor.</p>
+    </div>
+    <div class="border-4 border-primary neo-brutal-shadow-lg bg-black overflow-hidden max-w-3xl mx-auto">
+      <video class="w-full h-auto block" controls preload="auto">
+        <source src="mc-esmer-01-1_kB84WWSL.mp4" type="video/mp4"/>
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- Referans Markalar — Şerit -->
+<section class="bg-white border-b-4 border-primary py-10 overflow-hidden">
+  <p class="text-center font-label-bold text-on-surface-variant uppercase tracking-widest mb-8">Birlikte Büyüdüğümüz Markalar</p>
+  <div class="overflow-hidden">
+    <div class="logo-track flex gap-10 items-center" style="animation: ticker 30s linear infinite; white-space:nowrap; width:max-content;">
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="469985034_1110801357153234_3476049129247840980_n.jpg" alt="Rice" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="118235741_178319910368173_564565630397262309_n.jpg" alt="Nu-Nu" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="311229262_563474618916336_2958715705047661469_n.jpg" alt="TAGG" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="474554010_468067506240691_9139695069430425371_n.jpg" alt="Dresstopia" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="484411720_957453533229702_9026814631253627073_n.jpg" alt="Selverre" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="405197232_1417291062189916_7480125215523673126_n (1).jpg" alt="Uzemgo" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="482386758_1363460968405528_4445825219067734735_n.jpg" alt="Emka Water" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="345243343_226570333330952_26140042373622520_n.jpg" alt="BizimTransfer" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="544824228_17855872002516384_851348882670885609_n.jpg" alt="InkDyno" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="473792869_1159183162237417_7997336429652477258_n (1).jpg" alt="Adisyon Plus" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="619024950_17890943406407828_5246266930186304705_n.jpg" alt="JUP" class="w-full h-full object-cover"/></div>
+      <!-- set 2 — loop -->
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="469985034_1110801357153234_3476049129247840980_n.jpg" alt="Rice" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="118235741_178319910368173_564565630397262309_n.jpg" alt="Nu-Nu" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="311229262_563474618916336_2958715705047661469_n.jpg" alt="TAGG" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="474554010_468067506240691_9139695069430425371_n.jpg" alt="Dresstopia" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="484411720_957453533229702_9026814631253627073_n.jpg" alt="Selverre" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="405197232_1417291062189916_7480125215523673126_n (1).jpg" alt="Uzemgo" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="482386758_1363460968405528_4445825219067734735_n.jpg" alt="Emka Water" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="345243343_226570333330952_26140042373622520_n.jpg" alt="BizimTransfer" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="544824228_17855872002516384_851348882670885609_n.jpg" alt="InkDyno" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="473792869_1159183162237417_7997336429652477258_n (1).jpg" alt="Adisyon Plus" class="w-full h-full object-cover"/></div>
+      <div class="w-20 h-20 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm"><img src="619024950_17890943406407828_5246266930186304705_n.jpg" alt="JUP" class="w-full h-full object-cover"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- Meeting Form Section -->
+<section class="py-stack-lg grid-pattern border-b-4 border-primary">
+  <div class="max-w-[640px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-10">
+      <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed mb-4">ÜCRETSİZ</div>
+      <h2 class="font-headline-lg text-primary uppercase">Toplantı <span class="bg-secondary-fixed">Planla</span></h2>
+      <p class="text-on-surface-variant font-body-md mt-3">30 dakikada reklamlarınızı birlikte inceleyelim.</p>
+    </div>
+    <form class="bg-white border-4 border-primary neo-brutal-shadow-lg p-8 space-y-5" id="meeting-form">
+      <div class="bg-surface-container-low border-2 border-outline-variant p-4 flex gap-3 items-start">
+        <span class="material-symbols-outlined text-secondary mt-0.5" style="font-size:20px;font-variation-settings:'FILL' 1;">info</span>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          <span class="font-bold text-on-surface">Bu danışmanlık kimler için uygundur?</span><br/>
+          Aylık en az <span class="font-bold text-on-surface">50.000₺ – 100.000₺</span> reklam harcaması yapan ya da yapmayı planlayan işletmeler için en yüksek verimi sunabiliyorum. Daha küçük bütçeler için şu an yer açamıyorum.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Ad Soyad *</label>
+          <input type="text" required placeholder="Adınız Soyadınız"
+            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+        </div>
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Telefon *</label>
+          <input type="tel" required placeholder="+90 5xx xxx xx xx"
+            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+        </div>
+      </div>
+      <div>
+        <label class="font-label-bold text-on-surface block mb-2">E-posta *</label>
+        <input type="email" required placeholder="siz@sirket.com"
+          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+      </div>
+      <div>
+        <label class="font-label-bold text-on-surface block mb-2">Şirket / Web Sitesi</label>
+        <input type="text" placeholder="https://siteniz.com"
+          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Tercih Ettiğiniz Gün</label>
+          <select class="w-full border-2 border-primary px-4 py-3 font-body-md bg-white focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed appearance-none" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path d=%22M7 10l5 5 5-5z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;background-size:20px;">
+            <option value="">Gün seçiniz...</option>
+            <option>Pazartesi</option>
+            <option>Salı</option>
+            <option>Çarşamba</option>
+            <option>Perşembe</option>
+            <option>Cuma</option>
+            <option>Esnek</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Tercih Ettiğiniz Saat</label>
+          <select class="w-full border-2 border-primary px-4 py-3 font-body-md bg-white focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed appearance-none" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path d=%22M7 10l5 5 5-5z%22/></svg>');background-repeat:no-repeat;background-position:right 12px center;background-size:20px;">
+            <option value="">Saat seçiniz...</option>
+            <option>09:00 – 10:00</option>
+            <option>10:00 – 11:00</option>
+            <option>11:00 – 12:00</option>
+            <option>13:00 – 14:00</option>
+            <option>14:00 – 15:00</option>
+            <option>15:00 – 16:00</option>
+            <option>16:00 – 17:00</option>
+            <option>Esnek</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="font-label-bold text-on-surface block mb-2">Kısa Not (opsiyonel)</label>
+        <textarea rows="2" placeholder="Neyle ilgili konuşmak istediğinizi kısaca yazın..."
+          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed resize-none"></textarea>
+      </div>
+      <button type="submit"
+        class="w-full py-4 bg-secondary-fixed text-on-secondary-fixed border-4 border-primary font-headline-md neo-brutal-shadow hover:translate-y-[-2px] transition-transform neo-brutal-btn">
+        Toplantı Talep Et →
+      </button>
+      <p class="text-xs text-on-surface-variant text-center">24 saat içinde size döneceğim.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Problems Section -->
+<section class="border-b-4 border-primary" id="problems" style="background-color:#0a1f0f;">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <div class="max-w-3xl">
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-6 uppercase" style="color:#6bff8f;">
+        Reklamlarınız Beklentinin Altında mı Kalıyor?
+      </h2>
+      <p class="font-body-md mb-10" style="color:#a0b8a4;">
+        Sürekli bütçe harcıyor ama karşılığını alamıyor musunuz?
+      </p>
+
+      <div class="space-y-5 mb-12">
+        <div class="flex items-center gap-4 border-b pb-5" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">Google Ads yok ya da var ama para yakıyor.</span>
+        </div>
+        <div class="flex items-center gap-4 border-b pb-5" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">Meta Ads kurulu ama test yok.</span>
+        </div>
+        <div class="flex items-center gap-4 border-b pb-5" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">Websitenizdeki mail otomasyonları zayıf.</span>
+        </div>
+        <div class="flex items-center gap-4 border-b pb-5" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">SMS marketing yok, sepet terk edenler geri dönmüyor.</span>
+        </div>
+        <div class="flex items-center gap-4 border-b pb-5" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">Reklama yönelik kreatif brief yok.</span>
+        </div>
+        <div class="flex items-center gap-4" style="border-color:#1e3a24;">
+          <span class="material-symbols-outlined text-error flex-shrink-0" style="font-size:28px;font-variation-settings:'FILL' 1;">close</span>
+          <span class="font-body-lg" style="color:#e8f5e8;">Yüksek CPC, düşük ROAS, bütçe boşa gidiyor.</span>
+        </div>
+      </div>
+
+      <div class="border-t-2 pt-8" style="border-color:#1e3a24;">
+        <p class="font-body-md mb-3" style="color:#6bff8f;font-style:italic;">
+          Verimsiz reklamlar topluluk oluşturmaz veya satış yapmaz.
+        </p>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Peki, bu döngüden nasıl çıkılır? Doğru strateji ve otomasyonlarla sistemi <span style="color:#fff;font-weight:700;">sizin yerinize çalıştırın.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Section -->
+<section class="py-stack-lg bg-surface-bright border-b-4 border-primary" id="solutions">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+
+    <!-- Header row -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+      <div>
+        <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-primary uppercase leading-none">
+          Dijital <span class="bg-secondary-fixed px-2">Büyüme</span> Araçları
+        </h2>
+        <p class="font-body-lg mt-4 text-on-surface-variant max-w-xl">
+          Karmaşık verileri, basit ve etkili satış makinelerine dönüştüren özel kurgularımız.
+        </p>
+      </div>
+      <div class="text-right hidden md:block">
+        <span class="font-label-bold text-on-surface-variant tracking-widest uppercase text-sm">Hizmetler &amp; Çözümler / 03</span>
+        <div class="w-32 h-0.5 bg-outline-variant mt-2 ml-auto"></div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-gutter">
+
+      <!-- Card 1 — Mail Marketing -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-8px] transition-transform">
+        <div class="h-52 overflow-hidden border-b-4 border-primary relative">
+          <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80" alt="Mail Marketing" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute bottom-3 left-3 bg-primary text-white p-1.5 border-2 border-white">
+            <span class="material-symbols-outlined text-sm">mail</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline-md mb-5 uppercase">Mail Marketing</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Klaviyo Akış Kurulumu</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Sepet terk, hoş geldin ve kazanma dizileri.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Segmentasyon &amp; Kişiselleştirme</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Doğru mesaj, doğru kişiye, doğru zamanda.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">A/B Test &amp; Optimizasyon</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Açılma ve tıklama oranlarını artırma.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2 — SMS Marketing -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-8px] transition-transform">
+        <div class="h-52 overflow-hidden border-b-4 border-primary relative">
+          <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80" alt="SMS Marketing" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute bottom-3 left-3 bg-primary text-white p-1.5 border-2 border-white">
+            <span class="material-symbols-outlined text-sm">smartphone</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline-md mb-5 uppercase">SMS Marketing</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Sepet Hatırlatma</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Terk eden ziyaretçiyi geri getir.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Kampanya Mesajları</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Flaş indirim ve özel teklif SMS'leri.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Otomasyon Entegrasyonu</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Mail ile senkronize çalışan akışlar.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3 — Multiple Kanal -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-8px] transition-transform">
+        <div class="h-52 overflow-hidden border-b-4 border-primary relative">
+          <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&q=80" alt="Multiple Kanal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute bottom-3 left-3 bg-primary text-white p-1.5 border-2 border-white">
+            <span class="material-symbols-outlined text-sm">hub</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline-md mb-5 uppercase">Multiple Kanal</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Google &amp; Meta Ads</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Search, Shopping, Reels, Stories entegre yönetim.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">TikTok &amp; YouTube Ads</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Video odaklı büyüme kanalları.</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <div>
+                <div class="font-label-bold text-on-surface">Cross-Channel Strateji</div>
+                <div class="text-sm text-on-surface-variant mt-0.5">Tüm kanallar tek çatı altında koordineli.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-stack-lg bg-primary-container border-b-4 border-primary" id="how">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-surface-bright uppercase">Nasıl <span class="text-secondary-fixed">Çalışır?</span></h2>
+      <p class="text-on-primary-container font-body-md mt-4 max-w-xl mx-auto">Onboardingten ilk satışa kadar her adımı yönetiyoruz.</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-gutter relative">
+      <!-- connector line desktop -->
+      <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-1 bg-secondary-fixed z-0"></div>
+
+      <!-- Step 1 -->
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
+          <span class="font-display text-headline-md text-on-secondary-fixed font-black">01</span>
+        </div>
+        <h3 class="font-headline-md text-surface-bright mb-3">Ücretsiz Audit</h3>
+        <p class="font-body-md text-on-primary-container">Mevcut kampanyalarınızı analiz ediyor, kayıp noktaları tespit ediyoruz.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
+          <span class="font-display text-headline-md text-on-secondary-fixed font-black">02</span>
+        </div>
+        <h3 class="font-headline-md text-surface-bright mb-3">Strateji</h3>
+        <p class="font-body-md text-on-primary-container">Sektörünüze özel büyüme planı hazırlıyor, hedefleri netleştiriyoruz.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
+          <span class="font-display text-headline-md text-on-secondary-fixed font-black">03</span>
+        </div>
+        <h3 class="font-headline-md text-surface-bright mb-3">Lansman</h3>
+        <p class="font-body-md text-on-primary-container">Kampanyaları kuruyoruz, tracking yapılandırıyor, veriyi toplamaya başlıyoruz.</p>
+      </div>
+      <!-- Step 4 -->
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <div class="w-20 h-20 bg-primary border-4 border-secondary-fixed neo-brutal-shadow flex items-center justify-center mb-6">
+          <span class="font-display text-headline-md text-secondary-fixed font-black">04</span>
+        </div>
+        <h3 class="font-headline-md text-surface-bright mb-3">Ölçeklenme</h3>
+        <p class="font-body-md text-on-primary-container">Çalışanı 2x, 5x büyütüyor. Çalışmayanı anlık durduruyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results Section -->
+<section class="py-stack-lg bg-surface-bright border-b-4 border-primary" id="results">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-headline-lg text-primary uppercase">Sonuçlar</h2>
+      <p class="text-on-surface-variant font-body-md mt-3">Gerçek markalar. Gerçek rakamlar.</p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="grid grid-cols-3 gap-4 mb-16">
+      <div class="bg-white border-4 border-primary neo-brutal-shadow px-4 py-6 text-center">
+        <div class="font-black text-headline-lg text-primary">50+</div>
+        <div class="text-xs font-label-bold uppercase mt-1 text-on-surface-variant">Aktif Müşteri</div>
+      </div>
+      <div class="bg-secondary-fixed border-4 border-primary neo-brutal-shadow px-4 py-6 text-center">
+        <div class="font-black text-headline-lg text-primary">₺12M+</div>
+        <div class="text-xs font-label-bold uppercase mt-1 text-on-secondary-fixed">Yönetilen Bütçe</div>
+      </div>
+      <div class="bg-white border-4 border-primary neo-brutal-shadow px-4 py-6 text-center">
+        <div class="font-black text-headline-lg text-primary">22x</div>
+        <div class="text-xs font-label-bold uppercase mt-1 text-on-surface-variant">En Yüksek ROAS</div>
+      </div>
+    </div>
+
+    <!-- Result Cards Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow hover:translate-y-[-4px] transition-transform">
+        <div class="p-6 text-center border-b-4 border-primary">
+          <h3 class="font-headline-lg text-primary">22x ROAS</h3>
+          <p class="text-on-surface-variant font-body-md mt-1">E-ticaret · Google Shopping</p>
+        </div>
+        <div class="border-b-4 border-primary overflow-hidden">
+          <img src="download (5).jpeg" alt="Kampanya sonucu" class="w-full h-auto object-cover"/>
+        </div>
+        <div class="p-6 space-y-2">
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Reklam harcaması 22 kat geri döndü</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> %52 CPC düşüşü sağlandı</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Google Shopping kampanyası optimize edildi</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow hover:translate-y-[-4px] transition-transform">
+        <div class="p-6 text-center border-b-4 border-primary">
+          <h3 class="font-headline-lg text-primary">12x ROAS</h3>
+          <p class="text-on-surface-variant font-body-md mt-1">E-ticaret · Meta Ads</p>
+        </div>
+        <div class="border-b-4 border-primary overflow-hidden">
+          <img src="download (6).jpeg" alt="Kampanya sonucu" class="w-full h-auto object-cover"/>
+        </div>
+        <div class="p-6 space-y-2">
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Meta kreatif A/B testleriyle dönüşüm arttı</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> %38 CPC düşüşü</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Pixel ve Conversion API kurulumu yapıldı</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow hover:translate-y-[-4px] transition-transform">
+        <div class="p-6 text-center border-b-4 border-primary">
+          <h3 class="font-headline-lg text-primary">8.4x ROAS</h3>
+          <p class="text-on-surface-variant font-body-md mt-1">E-ticaret · Google + Meta</p>
+        </div>
+        <div class="border-b-4 border-primary overflow-hidden">
+          <img src="download (7).jpeg" alt="Kampanya sonucu" class="w-full h-auto object-cover"/>
+        </div>
+        <div class="p-6 space-y-2">
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Google ve Meta entegre yönetildi</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> %180 gelir artışı</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Remarketing kampanyaları devreye alındı</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow hover:translate-y-[-4px] transition-transform">
+        <div class="p-6 text-center border-b-4 border-primary">
+          <h3 class="font-headline-lg text-primary">%67 CPC Düşüşü</h3>
+          <p class="text-on-surface-variant font-body-md mt-1">SaaS · Google Search</p>
+        </div>
+        <div class="border-b-4 border-primary overflow-hidden">
+          <img src="download (8).jpeg" alt="Kampanya sonucu" class="w-full h-auto object-cover"/>
+        </div>
+        <div class="p-6 space-y-2">
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Tıklama maliyeti yarı yarıya düştü</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> 3x lead artışı sağlandı</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Smart Bidding stratejisi yeniden kurgulandı</p>
+        </div>
+      </div>
+
+      <!-- Card 5 — full width -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow hover:translate-y-[-4px] transition-transform md:col-span-2">
+        <div class="p-6 text-center border-b-4 border-primary">
+          <h3 class="font-headline-lg text-primary">3x Dönüşüm Artışı</h3>
+          <p class="text-on-surface-variant font-body-md mt-1">D2C Brand · Meta + Mail Otomasyon</p>
+        </div>
+        <div class="border-b-4 border-primary overflow-hidden max-h-80">
+          <img src="download (9).jpeg" alt="Kampanya sonucu" class="w-full h-auto object-cover object-top"/>
+        </div>
+        <div class="p-6 grid md:grid-cols-3 gap-4">
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Mail otomasyon kuruldu, sepet terk oranı düştü</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> Meta kreatifler yeniden yapılandırıldı</p>
+          <p class="font-body-md flex items-start gap-2"><span class="text-secondary font-black">→</span> 3 ayda dönüşüm 3x'e çıktı</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Mail / SMS / Otomasyon Başarı Hikayesi -->
+<section class="border-b-4 border-primary" style="background-color:#0a1f0f;">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+
+    <div class="mb-14">
+      <div class="inline-block border-2 px-3 py-1 font-label-bold mb-4" style="border-color:#6bff8f;color:#6bff8f;">BAŞARI HİKAYESİ</div>
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg uppercase" style="color:#fff;">
+        Mail, SMS ve Otomasyon<br/><span style="color:#6bff8f;">Bir Arada Çalışınca</span>
+      </h2>
+      <p class="font-body-lg mt-4 max-w-2xl" style="color:#a0b8a4;">
+        Reklam tek başına yetmez. Gelen trafiği yakalamak, ısıtmak ve geri getirmek için sistematik bir yapı gerekir.
+      </p>
+    </div>
+
+    <!-- İki görsel yan yana -->
+    <div class="grid md:grid-cols-2 gap-8 mb-14">
+      <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#6bff8f;">
+        <img src="Screenshot 2026-06-06 at 00.32.27.png" alt="Mail & SMS Otomasyon Sonucu" class="w-full h-auto object-cover"/>
+      </div>
+      <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#6bff8f;">
+        <img src="Screenshot 2026-06-06 at 00.33.12.png" alt="Mail & SMS Otomasyon Sonucu" class="w-full h-auto object-cover"/>
+      </div>
+    </div>
+
+    <!-- 3 adım -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">01 — Mail</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Ziyaretçi siteyi terk ettiğinde otomatik mail dizisi devreye giriyor. Sepet hatırlatma, ürün önerisi ve özel indirim akışı kuruldu.
+        </p>
+      </div>
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">02 — SMS</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Açılma oranı %98 olan SMS kanalıyla doğru zamanda doğru mesaj iletildi. Sepet terk oranı önemli ölçüde düştü.
+        </p>
+      </div>
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">03 — Otomasyon</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Klaviyo üzerinde kurulan akışlar reklam trafiğini gelire dönüştürdü. Sistem artık 7/24 sizin yerinize çalışıyor.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS REMOVED -->
+<section class="hidden" id="testimonials">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-primary uppercase">Müşteriler <span class="bg-secondary-fixed">Ne Diyor?</span></h2>
+      <p class="text-on-surface-variant font-body-md mt-4">Boş laflar değil — gerçek sonuçlar, gerçek insanlar.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-gutter">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow p-8 flex flex-col gap-6 hover:translate-y-[-4px] transition-transform">
+        <div class="text-4xl">"</div>
+        <p class="font-body-md text-on-surface-variant flex-grow">
+          Mert Esmer'dan önce Google Ads'e para atıp sonuç bekler duruyorduk. 3. ayda ROAS'ımız 2.1'den 11.4'e çıktı. Kesinlikle tavsiye ederim.
+        </p>
+        <div class="flex items-center gap-3 border-t-2 border-outline-variant pt-4">
+          <div class="w-12 h-12 bg-primary-container border-2 border-primary flex items-center justify-center font-black text-secondary-fixed text-xl">A</div>
+          <div>
+            <div class="font-label-bold text-on-surface">Ahmet Y.</div>
+            <div class="text-xs text-on-surface-variant">CEO — Giyim E-ticaret</div>
+          </div>
+          <div class="ml-auto bg-secondary-fixed border-2 border-primary px-2 py-1">
+            <span class="font-label-bold text-on-secondary-fixed text-xs">11.4x ROAS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-secondary-fixed border-4 border-primary neo-brutal-shadow p-8 flex flex-col gap-6 hover:translate-y-[-4px] transition-transform">
+        <div class="text-4xl">"</div>
+        <p class="font-body-md text-on-surface flex-grow">
+          Meta tarafında büyük kayıplar yaşıyorduk, dönüşüm takibimiz bile doğru değildi. Mert Esmer hem Conversion API'yi kurdu hem de kreatiflerimizi A/B teste soktu. Şimdi çok daha net görüyorum.
+        </p>
+        <div class="flex items-center gap-3 border-t-2 border-on-secondary-fixed-variant pt-4">
+          <div class="w-12 h-12 bg-primary border-2 border-primary flex items-center justify-center font-black text-secondary-fixed text-xl">S</div>
+          <div>
+            <div class="font-label-bold text-on-surface">Selin K.</div>
+            <div class="text-xs text-on-surface-variant">Marketing Manager — SaaS</div>
+          </div>
+          <div class="ml-auto bg-primary border-2 border-primary px-2 py-1">
+            <span class="font-label-bold text-secondary-fixed text-xs">%58 Daha Az CPC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow p-8 flex flex-col gap-6 hover:translate-y-[-4px] transition-transform">
+        <div class="text-4xl">"</div>
+        <p class="font-body-md text-on-surface-variant flex-grow">
+          Mobilya sektöründe dijital reklamda başarılı olmak çok zor dediler. Mert farklı düşündü. Şimdi online mağazamız fiziksel şubemizle yarışıyor.
+        </p>
+        <div class="flex items-center gap-3 border-t-2 border-outline-variant pt-4">
+          <div class="w-12 h-12 bg-primary-container border-2 border-primary flex items-center justify-center font-black text-secondary-fixed text-xl">E</div>
+          <div>
+            <div class="font-label-bold text-on-surface">Emre T.</div>
+            <div class="text-xs text-on-surface-variant">Kurucu — Lüks Mobilya</div>
+          </div>
+          <div class="ml-auto bg-secondary-fixed border-2 border-primary px-2 py-1">
+            <span class="font-label-bold text-on-secondary-fixed text-xs">8.4x ROAS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING REMOVED -->
+<section class="hidden" id="pricing">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+    <h2 class="font-headline-lg mb-4">Şeffaf Hizmet Paketleri</h2>
+    <p class="text-on-surface-variant font-body-md mb-16 max-w-xl mx-auto">Gizli ücret yok. Sözleşme baskısı yok. Sonuç yoksa ödeme yok.</p>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
+
+      <!-- Starter Plan -->
+      <div class="bg-white border-4 border-primary neo-brutal-shadow p-8 text-left flex flex-col">
+        <h3 class="font-headline-md mb-2 uppercase">Starter</h3>
+        <div class="mb-6">
+          <span class="text-headline-lg font-black">$199</span>
+          <span class="text-on-surface-variant">/aylık</span>
+        </div>
+        <ul class="space-y-3 mb-8 flex-grow font-body-md text-on-surface-variant">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check_circle</span> Google Search Ads Yönetimi</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check_circle</span> Haftalık Raporlama</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check_circle</span> Landing Page Revizeleri</li>
+          <li class="flex items-center gap-2 opacity-40"><span class="material-symbols-outlined">block</span> Meta Ads</li>
+          <li class="flex items-center gap-2 opacity-40"><span class="material-symbols-outlined">block</span> Creative Desteği</li>
+        </ul>
+        <a href="#contact" class="w-full py-3 border-4 border-primary font-label-bold hover:bg-secondary-container transition-colors neo-brutal-shadow text-center block">Hemen Başla</a>
+      </div>
+
+      <!-- Scale Plan (featured) -->
+      <div class="bg-secondary-fixed border-4 border-primary neo-brutal-shadow-lg p-8 text-left flex flex-col relative md:-translate-y-4">
+        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-label-bold uppercase text-xs">En Popüler</div>
+        <h3 class="font-headline-md mb-2 uppercase">Scale</h3>
+        <div class="mb-6">
+          <span class="text-headline-lg font-black">$499</span>
+          <span class="text-on-surface-variant">/aylık</span>
+        </div>
+        <ul class="space-y-3 mb-8 flex-grow font-body-md font-bold">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings:'FILL' 1;">check_circle</span> Google + Meta Ads</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings:'FILL' 1;">check_circle</span> Creative Tasarım Desteği</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings:'FILL' 1;">check_circle</span> Conversion API Setup</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings:'FILL' 1;">check_circle</span> 7/24 Teknik Destek</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings:'FILL' 1;">check_circle</span> Aylık Strateji Toplantısı</li>
+        </ul>
+        <a href="#contact" class="w-full py-3 bg-primary text-white border-4 border-primary font-label-bold hover:bg-on-surface transition-colors neo-brutal-shadow text-center block">Scale Etmeye Başla</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-primary-container border-4 border-primary neo-brutal-shadow p-8 text-left flex flex-col">
+        <h3 class="font-headline-md mb-2 uppercase text-surface-bright">Enterprise</h3>
+        <div class="mb-6">
+          <span class="text-headline-lg font-black text-secondary-fixed">Custom</span>
+        </div>
+        <ul class="space-y-3 mb-8 flex-grow font-body-md text-on-primary-container">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> Tüm Scale özellikleri</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> Dedicated Hesap Yöneticisi</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> TikTok / YouTube Ads</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> Haftalık Strateji Toplantısı</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span> SLA Garantili Yanıt Süresi</li>
+        </ul>
+        <a href="#contact" class="w-full py-3 border-4 border-secondary-fixed text-secondary-fixed font-label-bold hover:bg-tertiary-container transition-colors neo-brutal-shadow text-center block">Teklif Al</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pazarlama Notları / Blog -->
+<section class="py-stack-lg bg-surface-bright border-b-4 border-primary" id="notlar">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+      <div>
+        <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed mb-4">MERT YAZAR</div>
+        <h2 class="font-display text-headline-lg text-primary uppercase">Pazarlama <span class="bg-secondary-fixed">Notları</span></h2>
+        <p class="font-body-lg mt-3 text-on-surface-variant max-w-xl">Dijital pazarlama içgörüleri — sahadan gelen taktikler, veriler ve dürüst gözlemler.</p>
+      </div>
+      <a href="#" class="font-label-bold border-2 border-primary px-5 py-2 neo-brutal-shadow hover:bg-secondary-fixed transition-colors whitespace-nowrap self-start md:self-auto">
+        Tümünü Gör →
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-gutter">
+
+      <!-- Post 1 -->
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+        <div class="h-48 border-b-4 border-primary relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80" alt="Mail Marketing" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Mail Marketing</div>
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-on-surface-variant font-label-bold mb-2">5 Haz 2025 · 4 dk okuma</p>
+          <h3 class="font-headline-md mb-3 leading-snug">Klaviyo'da Sepet Terk Akışını Nasıl Kuruyorum?</h3>
+          <p class="font-body-md text-on-surface-variant text-sm mb-4">Türkiye'deki e-ticaret sitelerinin %80'i bu akışı hiç kurmamış. İşte adım adım kurulum rehberi.</p>
+          <a href="blog-klaviyo-sepet-terk.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+        <div class="h-48 border-b-4 border-primary relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1655199798153-a8f56d8655d2?w=800&q=80" alt="Meta Ads" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Meta Ads</div>
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-on-surface-variant font-label-bold mb-2">28 May 2025 · 6 dk okuma</p>
+          <h3 class="font-headline-md mb-3 leading-snug">Meta'da Kreatif Test Etmeden Para Yakıyorsunuz</h3>
+          <p class="font-body-md text-on-surface-variant text-sm mb-4">Çoğu işletme tek bir kreatifle kampanya yürütüyor. A/B testiyle ROAS'ı nasıl 3x artırırsınız?</p>
+          <a href="blog-meta-kreatif-test.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="bg-white border-4 border-primary neo-brutal-shadow group hover:translate-y-[-6px] transition-transform">
+        <div class="h-48 border-b-4 border-primary relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+          <div class="absolute top-3 left-3 bg-secondary-fixed border-2 border-primary px-2 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Takip & Analitik</div>
+        </div>
+        <div class="p-6">
+          <p class="text-xs text-on-surface-variant font-label-bold mb-2">15 May 2025 · 5 dk okuma</p>
+          <h3 class="font-headline-md mb-3 leading-snug">GA4 + GTM Kurulmadan Reklam Vermek Kör Uçmak</h3>
+          <p class="font-body-md text-on-surface-variant text-sm mb-4">Conversion tracking olmadan hangi reklamın sattığını bilemezsiniz. İşte doğru kurulum nasıl yapılır.</p>
+          <a href="blog-ga4-gtm-kurulum.html" class="font-label-bold text-secondary hover:underline">Okumaya devam et →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="blog.html" class="inline-block bg-primary text-white font-headline-md px-10 py-4 border-4 border-primary neo-brutal-shadow hover:translate-y-[-2px] transition-transform">Tüm Yazıları Gör →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-stack-lg grid-pattern border-b-4 border-primary" id="faq">
+  <div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-primary uppercase">Sık Sorulan <span class="bg-secondary-fixed">Sorular</span></h2>
+    </div>
+    <div class="space-y-4" id="faq-list">
+
+      <div class="faq-item bg-white border-4 border-primary neo-brutal-shadow">
+        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+          <span class="font-headline-md text-primary">Minimum bütçe nedir?</span>
+          <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+        </button>
+        <div class="faq-answer px-6 pb-6">
+          <p class="font-body-md text-on-surface-variant">Reklam bütçeniz için minimum öneri aylık $500'dır. Yönetim ücretimiz bundan ayrıdır. Küçük bütçelerle de çalışabiliriz ancak optimize sonuçlar için bu eşiği tutmak önemlidir.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white border-4 border-primary neo-brutal-shadow">
+        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+          <span class="font-headline-md text-primary">Sonuçlar ne zaman başlar?</span>
+          <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+        </button>
+        <div class="faq-answer px-6 pb-6">
+          <p class="font-body-md text-on-surface-variant">İlk 2 hafta kurulum ve veri toplama sürecidir. Performans iyileştirmeleri genellikle 30-45 günde netleşmeye başlar. Google ve Meta'nın öğrenme algoritmaları göz önünde bulundurulduğunda, 60. günden itibaren kalıcı büyüme görülür.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white border-4 border-primary neo-brutal-shadow">
+        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+          <span class="font-headline-md text-primary">Sözleşme süresi var mı?</span>
+          <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+        </button>
+        <div class="faq-answer px-6 pb-6">
+          <p class="font-body-md text-on-surface-variant">Minimum 3 aylık bir başlangıç dönemi talep ediyoruz — bu süre algoritmaların öğrenmesi için gereklidir. 3. ayın sonunda aylık bazda devam edebilirsiniz. Bağlayan uzun dönem sözleşmelerimiz yoktur.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white border-4 border-primary neo-brutal-shadow">
+        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+          <span class="font-headline-md text-primary">Hangi sektörlerde çalışıyorsunuz?</span>
+          <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+        </button>
+        <div class="faq-answer px-6 pb-6">
+          <p class="font-body-md text-on-surface-variant">E-ticaret, SaaS, lüks ürünler, hizmet sektörü ve lead generation odaklı işletmeler birincil hedef kitlemizdir. Alkol, kumar ve yasadışı ürünler gibi kısıtlı kategorilerde çalışmıyoruz.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white border-4 border-primary neo-brutal-shadow">
+        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+          <span class="font-headline-md text-primary">Raporlama nasıl yapılıyor?</span>
+          <span class="material-symbols-outlined faq-icon transition-transform">expand_more</span>
+        </button>
+        <div class="faq-answer px-6 pb-6">
+          <p class="font-body-md text-on-surface-variant">Tüm paketlerde canlı Looker Studio dashboard erişimi sağlıyoruz. Starter'da haftalık, Scale ve Enterprise'da haftalık + aylık strateji toplantısı ile birlikte düzenli raporlama yapılır. Hiçbir şey gizlenmez.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Contact Form Section -->
+<section class="py-stack-lg bg-primary-container border-b-4 border-primary" id="contact">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row gap-16 items-start">
+
+    <!-- Left: CTA copy -->
+    <div class="lg:w-1/2 space-y-6">
+      <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed">ÜCRETSİZ AUDIT</div>
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-surface-bright uppercase">
+        Reklamlarınızı Ücretsiz <span class="text-secondary-fixed">Analiz Edelim.</span>
+      </h2>
+      <p class="font-body-lg text-on-primary-container">
+        30 dakikalık ücretsiz bir kampanya auditi ile kayıp noktalarınızı tespit ediyoruz. Taahhüt yok, baskı yok.
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary-fixed mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          <span class="text-on-primary-container font-body-md">Google &amp; Meta hesaplarınızın derinlemesine analizi</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary-fixed mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          <span class="text-on-primary-container font-body-md">Tracking doğruluğu kontrolü</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary-fixed mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          <span class="text-on-primary-container font-body-md">Rakip analizi ve fırsat haritası</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-secondary-fixed mt-1" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          <span class="text-on-primary-container font-body-md">Kişiselleştirilmiş büyüme önerileri</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="lg:w-1/2 w-full">
+      <form class="bg-white border-4 border-primary neo-brutal-shadow-lg p-8 space-y-5" id="contact-form">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="font-label-bold text-on-surface block mb-2">Ad Soyad *</label>
+            <input type="text" required placeholder="Mert Esmer"
+              class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+          </div>
+          <div>
+            <label class="font-label-bold text-on-surface block mb-2">E-posta *</label>
+            <input type="email" required placeholder="mertcan@sirket.com"
+              class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+          </div>
+        </div>
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Şirket / Web Sitesi *</label>
+          <input type="text" required placeholder="https://sirketiniz.com"
+            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
+        </div>
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Aylık Reklam Bütçeniz</label>
+          <select class="w-full border-2 border-primary px-4 py-3 font-body-md bg-white focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed appearance-none">
+            <option value="">Seçiniz...</option>
+            <option>$500 – $1.000</option>
+            <option>$1.000 – $5.000</option>
+            <option>$5.000 – $20.000</option>
+            <option>$20.000+</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-label-bold text-on-surface block mb-2">Mevcut en büyük sorun?</label>
+          <textarea rows="3" placeholder="Örn: ROAS düşük, tracking bozuk, satışlar durdu..."
+            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed resize-none"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full py-4 bg-secondary-fixed text-on-secondary-fixed border-4 border-primary font-headline-md neo-brutal-shadow hover:translate-y-[-2px] transition-transform neo-brutal-btn">
+          Ücretsiz Audit Talep Et →
+        </button>
+        <p class="text-xs text-on-surface-variant text-center">48 saat içinde size ulaşıyoruz. Spam yok.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary-container border-t-4 border-primary py-stack-md">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-12">
+    <div class="max-w-xs">
+      <div class="font-display text-headline-md text-secondary-fixed mb-4">Mert Esmer</div>
+      <p class="text-on-primary-container font-body-md">Veri odaklı dijital pazarlama ajansı. Reklam harcamalarınızı gelire dönüştürüyoruz.</p>
+      <div class="flex gap-3 mt-6">
+        <a href="#" class="w-10 h-10 border-2 border-on-primary-container flex items-center justify-center text-on-primary-container hover:border-secondary-fixed hover:text-secondary-fixed transition-colors">
+          <span class="material-symbols-outlined text-sm">language</span>
+        </a>
+        <a href="#" class="w-10 h-10 border-2 border-on-primary-container flex items-center justify-center text-on-primary-container hover:border-secondary-fixed hover:text-secondary-fixed transition-colors">
+          <span class="material-symbols-outlined text-sm">mail</span>
+        </a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-12">
+      <div>
+        <div class="text-surface-bright font-label-bold mb-4 uppercase">Hızlı Linkler</div>
+        <ul class="space-y-2">
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#solutions">Hizmetler</a></li>
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#results">Sonuçlar</a></li>
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#pricing">Paketler</a></li>
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#faq">SSS</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-surface-bright font-label-bold mb-4 uppercase">Yasal</div>
+        <ul class="space-y-2">
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#">Gizlilik Politikası</a></li>
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#">Hizmet Şartları</a></li>
+          <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md" href="#">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-6 border-t border-on-primary-fixed-variant flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-on-primary-container text-body-md">© 2025 Mert Esmer. Tüm hakları saklıdır.</p>
+    <p class="text-on-primary-container text-body-md font-label-bold">Built for performance. Mert Esmer</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // Button micro-interactions
+  document.querySelectorAll('button[type!="submit"]').forEach(button => {
+    button.addEventListener('mousedown', () => button.style.transform = 'translate(2px,2px)');
+    button.addEventListener('mouseup', () => button.style.transform = '');
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const item = toggle.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const icon = toggle.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Day picker
+  document.querySelectorAll('.day-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('bg-secondary-fixed'));
+      btn.classList.add('bg-secondary-fixed');
+    });
+  });
+
+  // Meeting Form submit
+  document.getElementById('meeting-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = '✓ Talebiniz Alındı! 24 saat içinde dönüyorum.';
+    btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+    btn.classList.add('bg-primary', 'text-white');
+    btn.disabled = true;
+  });
+
+  // Contact Form submit (placeholder)
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = '✓ Talebiniz Alındı! 48 saat içinde dönüyoruz.';
+    btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+    btn.classList.add('bg-primary', 'text-white');
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>

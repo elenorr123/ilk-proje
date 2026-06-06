@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="light" lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Klaviyo'da Sepet Terk Akışını Nasıl Kuruyorum? | Mert Esmer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#f9f9ff", "outline": "#76777d",
+          "primary-container": "#131b2e", "secondary": "#006e2f",
+          "surface": "#f9f9ff", "background": "#f9f9ff",
+          "on-background": "#111c2d", "on-surface": "#111c2d",
+          "secondary-fixed": "#6bff8f", "on-secondary-fixed": "#002109",
+          "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d",
+          "surface-container-low": "#f0f3ff", "primary": "#000000",
+          "on-primary-container": "#7c839b",
+        },
+        fontFamily: { "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-bold": ["Hanken Grotesk"], "display": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"] },
+        fontSize: {
+          "body-lg": ["20px", {lineHeight:"1.6", fontWeight:"500"}],
+          "body-md": ["16px", {lineHeight:"1.5", fontWeight:"400"}],
+          "label-bold": ["14px", {lineHeight:"1.2", fontWeight:"700"}],
+          "headline-lg": ["48px", {lineHeight:"1.2", fontWeight:"800"}],
+          "headline-md": ["32px", {lineHeight:"1.3", fontWeight:"700"}],
+        },
+        spacing: { "margin-desktop": "64px", "margin-mobile": "20px", "stack-lg": "80px" }
+      }
+    }
+  }
+</script>
+<style>
+  .neo-brutal-shadow { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .prose h2 { font-size: 28px; font-weight: 800; margin: 2rem 0 1rem; }
+  .prose h3 { font-size: 22px; font-weight: 700; margin: 1.5rem 0 0.75rem; }
+  .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+  .prose ul { list-style: none; padding: 0; margin-bottom: 1.25rem; }
+  .prose ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+  .prose ul li::before { content: "→"; position: absolute; left: 0; color: #006e2f; font-weight: 700; }
+  .prose blockquote { border-left: 4px solid #6bff8f; padding-left: 1.25rem; margin: 1.5rem 0; font-style: italic; color: #45464d; }
+  .prose strong { font-weight: 700; }
+</style>
+</head>
+<body class="font-body-md text-on-background bg-background">
+
+<!-- Nav -->
+<header class="bg-surface-bright sticky top-0 z-50 border-b-4 border-primary neo-brutal-shadow">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1200px] mx-auto">
+    <a class="font-display text-headline-md font-black text-primary" href="index.html">Mert Esmer</a>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="text-on-surface font-label-bold hover:text-secondary" href="blog.html">← Tüm Yazılar</a>
+      <a href="index.html#contact" class="bg-secondary-fixed text-on-secondary-fixed font-label-bold px-6 py-2 border-2 border-primary neo-brutal-shadow hover:translate-y-[-2px] transition-transform">Ücretsiz Analiz Al</a>
+    </nav>
+    <a href="blog.html" class="md:hidden font-label-bold text-on-surface flex items-center gap-1">
+      <span class="material-symbols-outlined text-sm">arrow_back</span> Geri
+    </a>
+  </div>
+</header>
+
+<main class="max-w-[760px] mx-auto px-margin-mobile md:px-margin-desktop py-16">
+
+  <!-- Meta -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-secondary-fixed border-2 border-primary px-3 py-0.5 font-label-bold text-xs text-on-secondary-fixed">Mail Marketing</span>
+    <span class="text-on-surface-variant font-label-bold text-xs">5 Haz 2025 · 4 dk okuma</span>
+  </div>
+
+  <!-- Başlık -->
+  <h1 class="font-headline-lg text-primary mb-6 leading-tight">Klaviyo'da Sepet Terk Akışını Nasıl Kuruyorum?</h1>
+
+  <!-- Kapak -->
+  <div class="border-4 border-primary neo-brutal-shadow mb-10 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=80" alt="Mail Marketing" class="w-full h-64 object-cover"/>
+  </div>
+
+  <!-- İçerik -->
+  <div class="prose font-body-md text-on-surface">
+
+    <blockquote>Türkiye'deki e-ticaret sitelerinin %80'i sepet terk akışını hiç kurmamış. Bu, her gün masada para bırakmak demek.</blockquote>
+
+    <h2>Neden Sepet Terk Akışı Bu Kadar Önemli?</h2>
+    <p>Bir ziyaretçi ürününüzü sepete ekleyip çıkıyor. Bu kişi rastgele birisi değil — ürününüze ilgi duyan, satın almaya en yakın segmentteki biri. Doğru bir mail akışıyla bu kişiyi geri getirebilirsiniz.</p>
+    <p>Ortalama sepet terk oranı %70'in üzerinde. Yani her 10 kişiden 7'si sepeti terk ediyor. İyi bir akışla bunların %10-20'sini geri kazanabilirsiniz.</p>
+
+    <h2>Klaviyo'da Kurulum Adımları</h2>
+
+    <h3>1. Akışı Oluşturun</h3>
+    <p>Klaviyo'da "Flows" menüsüne gidin. "Abandoned Cart" template'ini seçin veya sıfırdan başlayın. Trigger olarak <strong>"Checkout Started"</strong> event'ini kullanın.</p>
+
+    <h3>2. Zamanlama</h3>
+    <p>3 aşamalı bir yapı kuruyorum:</p>
+    <ul>
+      <li><strong>1. Mail — 1 saat sonra:</strong> Yumuşak hatırlatma. "Sepetiniz sizi bekliyor."</li>
+      <li><strong>2. Mail — 24 saat sonra:</strong> Sosyal kanıt. Yorumlar, ürün faydaları.</li>
+      <li><strong>3. Mail — 72 saat sonra:</strong> Son şans. İndirim kodu (isteğe bağlı).</li>
+    </ul>
+
+    <h3>3. Konu Satırı Önerileri</h3>
+    <ul>
+      <li>Sepetinizdeki ürünler azalıyor 👀</li>
+      <li>Bunu unutmayın — [Ürün Adı] hâlâ orada</li>
+      <li>Son 3 saat (%15 indirimli)</li>
+    </ul>
+
+    <h2>Sonuçlar</h2>
+    <p>Kurduğum akışlarda ortalama <strong>%12-18 dönüşüm oranı</strong> görüyorum. Yani 100 sepet terkten 12-18 satış. Bu, sıfır reklam harcamasıyla elde edilen gelir.</p>
+
+    <blockquote>Klaviyo akışı bir kez kurulur, sonra sizin yerinize çalışır. En iyi yatırımlardan biri.</blockquote>
+
+  </div>
+
+  <!-- Yazar kutusu -->
+  <div class="border-4 border-primary neo-brutal-shadow p-6 mt-12 flex gap-5 items-start bg-surface-container-low">
+    <img src="mert.jpg" alt="Mert Esmer" class="w-16 h-16 rounded-full object-cover border-2 border-primary flex-shrink-0"/>
+    <div>
+      <div class="font-label-bold text-on-surface mb-1">Mert Esmer</div>
+      <p class="text-sm text-on-surface-variant">Dijital pazarlama danışmanı. Mail, SMS ve reklam otomasyonuyla e-ticaret markalarını büyütüyorum.</p>
+      <a href="index.html#contact" class="inline-block mt-3 bg-secondary-fixed text-on-secondary-fixed font-label-bold px-4 py-2 border-2 border-primary neo-brutal-shadow text-sm hover:translate-y-[-1px] transition-transform">Benimle Çalış →</a>
+    </div>
+  </div>
+
+  <!-- Önceki / Sonraki -->
+  <div class="flex justify-between mt-12 pt-8 border-t-2 border-outline-variant">
+    <a href="blog.html" class="font-label-bold text-on-surface hover:text-secondary flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">arrow_back</span> Tüm Yazılar
+    </a>
+    <a href="blog-meta-kreatif-test.html" class="font-label-bold text-on-surface hover:text-secondary flex items-center gap-2">
+      Sonraki Yazı <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+  </div>
+
+</main>
+
+<footer class="bg-primary-container border-t-4 border-primary py-8">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="font-display text-headline-md text-secondary-fixed">Mert Esmer</div>
+    <p class="text-on-primary-container text-sm">© 2025 Mert Esmer. Tüm hakları saklıdır.</p>
+    <a href="index.html#contact" class="bg-secondary-fixed text-on-secondary-fixed font-label-bold px-6 py-2 border-2 border-primary neo-brutal-shadow hover:translate-y-[-2px] transition-transform">Ücretsiz Analiz Al</a>
+  </div>
+</footer>
+
+</body>
+</html>
