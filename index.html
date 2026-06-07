@@ -1180,7 +1180,7 @@
   });
 
   // Meeting Form — Supabase'e kaydet + yönlendir
-  document.getElementById('meeting-form').addEventListener('submit', async function(e) {
+  document.getElementById('meeting-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
     btn.textContent = 'Gönderiliyor...';
@@ -1196,26 +1196,24 @@
       status: 'bekliyor'
     };
 
-    try {
-      await fetch('https://jqwymnmahwacqchtgzos.supabase.co/rest/v1/leads', {
-        method: 'POST',
-        headers: {
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(data)
-      });
-    } catch(err) {
-      console.error('Supabase hatası:', err);
-    } finally {
-      window.location.href = 'tesekkurler.html';
-    }
+    // Supabase'e arka planda gönder (fire & forget)
+    fetch('https://jqwymnmahwacqchtgzos.supabase.co/rest/v1/leads', {
+      method: 'POST',
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(data)
+    }).catch(function(err) { console.error('Supabase hatası:', err); });
+
+    // Hemen yönlendir — Supabase'i bekleme
+    window.location.href = 'tesekkurler.html';
   });
 
   // Contact Form — Supabase'e kaydet + yönlendir
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
     btn.textContent = 'Gönderiliyor...';
@@ -1231,22 +1229,20 @@
       status: 'bekliyor'
     };
 
-    try {
-      await fetch('https://jqwymnmahwacqchtgzos.supabase.co/rest/v1/leads', {
-        method: 'POST',
-        headers: {
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(data)
-      });
-    } catch(err) {
-      console.error('Supabase hatası:', err);
-    } finally {
-      window.location.href = 'tesekkurler.html';
-    }
+    // Supabase'e arka planda gönder (fire & forget)
+    fetch('https://jqwymnmahwacqchtgzos.supabase.co/rest/v1/leads', {
+      method: 'POST',
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(data)
+    }).catch(function(err) { console.error('Supabase hatası:', err); });
+
+    // Hemen yönlendir — Supabase'i bekleme
+    window.location.href = 'tesekkurler.html';
   });
 </script>
 </body>
