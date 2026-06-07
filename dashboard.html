@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard | Mert Esmer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Hanken Grotesk', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; font-family: 'Material Symbols Outlined'; }
+</style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+<!-- Login screen -->
+<div id="login-screen" class="fixed inset-0 bg-gray-950 flex items-center justify-center z-50">
+  <div class="bg-gray-900 border border-gray-800 p-10 w-full max-w-sm rounded-xl">
+    <div class="text-2xl font-black text-white mb-2">Mert Esmer</div>
+    <div class="text-gray-400 text-sm mb-8">Dashboard — Giriş Yap</div>
+    <input id="pwd-input" type="password" placeholder="Şifre"
+      class="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg mb-4 focus:outline-none focus:border-green-400 text-sm"/>
+    <button onclick="checkLogin()"
+      class="w-full bg-green-400 text-gray-900 font-bold py-3 rounded-lg hover:bg-green-300 transition-colors">
+      Giriş Yap
+    </button>
+    <p id="login-err" class="text-red-400 text-xs mt-3 hidden text-center">Şifre yanlış.</p>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="hidden">
+
+  <!-- Sidebar -->
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-56 bg-gray-900 border-r border-gray-800 flex flex-col flex-shrink-0">
+      <div class="p-6 border-b border-gray-800">
+        <div class="font-black text-white text-lg">Mert Esmer</div>
+        <div class="text-green-400 text-xs mt-0.5">Dashboard</div>
+      </div>
+      <nav class="flex-1 p-4 space-y-1">
+        <button onclick="showTab('leads')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-3 bg-gray-800 text-white">
+          <span class="material-symbols-outlined text-base">person_search</span> Leads
+        </button>
+        <button onclick="showTab('stats')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-3 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">
+          <span class="material-symbols-outlined text-base">bar_chart</span> İstatistikler
+        </button>
+        <a href="index.html" class="w-full text-left px-3 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-3 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors">
+          <span class="material-symbols-outlined text-base">language</span> Siteye Dön
+        </a>
+      </nav>
+      <div class="p-4 border-t border-gray-800">
+        <button onclick="logout()" class="w-full text-left px-3 py-2 rounded-lg text-xs text-gray-500 hover:text-red-400 flex items-center gap-2 transition-colors">
+          <span class="material-symbols-outlined text-sm">logout</span> Çıkış
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto bg-gray-950">
+
+      <!-- LEADS TAB -->
+      <div id="tab-leads" class="p-8">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h1 class="text-2xl font-black text-white">Lead Yönetimi</h1>
+            <p class="text-gray-400 text-sm mt-1">Formdan gelen toplantı talepleri</p>
+          </div>
+          <button onclick="loadLeads()" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-colors border border-gray-700">
+            <span class="material-symbols-outlined text-sm">refresh</span> Yenile
+          </button>
+        </div>
+
+        <!-- Stats cards -->
+        <div class="grid grid-cols-4 gap-4 mb-8" id="lead-stats">
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-5">
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-2">Toplam</div>
+            <div class="text-3xl font-black text-white" id="stat-total">—</div>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-5">
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-2">Bekliyor</div>
+            <div class="text-3xl font-black text-yellow-400" id="stat-bekliyor">—</div>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-5">
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-2">Görüşüldü</div>
+            <div class="text-3xl font-black text-green-400" id="stat-gorüsüldü">—</div>
+          </div>
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-5">
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-2">Bu Hafta</div>
+            <div class="text-3xl font-black text-blue-400" id="stat-week">—</div>
+          </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="flex gap-2 mb-4">
+          <button onclick="filterLeads('tumu')" class="filter-lead-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-green-400 text-gray-900">Tümü</button>
+          <button onclick="filterLeads('bekliyor')" class="filter-lead-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-800 text-gray-400 hover:text-white">Bekliyor</button>
+          <button onclick="filterLeads('görüşüldü')" class="filter-lead-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-800 text-gray-400 hover:text-white">Görüşüldü</button>
+          <button onclick="filterLeads('reddedildi')" class="filter-lead-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-800 text-gray-400 hover:text-white">Reddedildi</button>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-800 text-gray-400 text-xs uppercase tracking-wider">
+                <th class="text-left px-5 py-3">Ad Soyad</th>
+                <th class="text-left px-5 py-3">İletişim</th>
+                <th class="text-left px-5 py-3">Web Sitesi</th>
+                <th class="text-left px-5 py-3">Not</th>
+                <th class="text-left px-5 py-3">Tarih</th>
+                <th class="text-left px-5 py-3">Durum</th>
+              </tr>
+            </thead>
+            <tbody id="leads-table">
+              <tr><td colspan="6" class="text-center py-16 text-gray-500">Yükleniyor...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- STATS TAB -->
+      <div id="tab-stats" class="p-8 hidden">
+        <div class="mb-8">
+          <h1 class="text-2xl font-black text-white">İstatistikler</h1>
+          <p class="text-gray-400 text-sm mt-1">Lead ve form verileri özeti</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <!-- Lead timeline -->
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 col-span-2">
+            <div class="font-bold text-white mb-4">Son 7 Günlük Lead Akışı</div>
+            <div id="chart-bars" class="flex items-end gap-2 h-32"></div>
+            <div id="chart-labels" class="flex gap-2 mt-2"></div>
+          </div>
+
+          <!-- Kaynak dağılımı -->
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+            <div class="font-bold text-white mb-4">Durum Dağılımı</div>
+            <div id="status-breakdown" class="space-y-3"></div>
+          </div>
+
+          <!-- Son 30 gün -->
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+            <div class="font-bold text-white mb-4">Son 30 Gün</div>
+            <div class="space-y-4" id="monthly-stats"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Lead Detail Modal -->
+<div id="lead-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+  <div class="bg-gray-900 border border-gray-700 rounded-2xl w-full max-w-md p-6">
+    <div class="flex justify-between items-start mb-5">
+      <h3 class="font-bold text-white text-lg" id="modal-name">—</h3>
+      <button onclick="closeModal()" class="text-gray-500 hover:text-white"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="space-y-3 mb-6">
+      <div class="flex gap-3"><span class="text-gray-500 text-sm w-20">Email</span><span class="text-white text-sm" id="modal-email">—</span></div>
+      <div class="flex gap-3"><span class="text-gray-500 text-sm w-20">Telefon</span><span class="text-white text-sm" id="modal-phone">—</span></div>
+      <div class="flex gap-3"><span class="text-gray-500 text-sm w-20">Website</span><span class="text-white text-sm" id="modal-website">—</span></div>
+      <div class="flex gap-3"><span class="text-gray-500 text-sm w-20">Not</span><span class="text-white text-sm" id="modal-note">—</span></div>
+      <div class="flex gap-3"><span class="text-gray-500 text-sm w-20">Tarih</span><span class="text-white text-sm" id="modal-date">—</span></div>
+    </div>
+    <div class="border-t border-gray-800 pt-4">
+      <div class="text-gray-400 text-xs mb-2 uppercase tracking-wider">Durum Güncelle</div>
+      <div class="flex gap-2">
+        <button onclick="updateStatus('bekliyor')" class="flex-1 py-2 rounded-lg text-xs font-bold bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 hover:bg-yellow-400/20">Bekliyor</button>
+        <button onclick="updateStatus('görüşüldü')" class="flex-1 py-2 rounded-lg text-xs font-bold bg-green-400/10 text-green-400 border border-green-400/30 hover:bg-green-400/20">Görüşüldü</button>
+        <button onclick="updateStatus('reddedildi')" class="flex-1 py-2 rounded-lg text-xs font-bold bg-red-400/10 text-red-400 border border-red-400/30 hover:bg-red-400/20">Reddedildi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SUPABASE_URL = 'https://jqwymnmahwacqchtgzos.supabase.co';
+const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDc1Mzc2NiwiZXhwIjoyMDk2MzI5NzY2fQ.AMNmp755gAnQ0yf_Dj5XH4xuZDbJk0ElSvu9uQ0W_x0';
+const PASS = 'mert2025';
+
+let allLeads = [];
+let currentLeadId = null;
+let currentFilter = 'tumu';
+
+// --- AUTH ---
+function checkLogin() {
+  const val = document.getElementById('pwd-input').value;
+  if (val === PASS) {
+    document.getElementById('login-screen').classList.add('hidden');
+    document.getElementById('dashboard').classList.remove('hidden');
+    loadLeads();
+  } else {
+    document.getElementById('login-err').classList.remove('hidden');
+  }
+}
+document.getElementById('pwd-input').addEventListener('keydown', e => { if(e.key==='Enter') checkLogin(); });
+
+function logout() {
+  document.getElementById('dashboard').classList.add('hidden');
+  document.getElementById('login-screen').classList.remove('hidden');
+  document.getElementById('pwd-input').value = '';
+}
+
+// --- TABS ---
+function showTab(tab) {
+  document.getElementById('tab-leads').classList.add('hidden');
+  document.getElementById('tab-stats').classList.add('hidden');
+  document.getElementById('tab-' + tab).classList.remove('hidden');
+  document.querySelectorAll('.nav-btn').forEach(b => {
+    b.classList.remove('bg-gray-800','text-white');
+    b.classList.add('text-gray-400');
+  });
+  event.currentTarget.classList.add('bg-gray-800','text-white');
+  event.currentTarget.classList.remove('text-gray-400');
+  if (tab === 'stats') renderStats();
+}
+
+// --- LOAD LEADS ---
+async function loadLeads() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/leads?select=*&order=created_at.desc`, {
+    headers: { 'apikey': SERVICE_KEY, 'Authorization': 'Bearer ' + SERVICE_KEY }
+  });
+  allLeads = await res.json();
+  renderLeads(allLeads);
+  renderStatCards(allLeads);
+}
+
+function renderStatCards(leads) {
+  document.getElementById('stat-total').textContent = leads.length;
+  document.getElementById('stat-bekliyor').textContent = leads.filter(l=>l.status==='bekliyor').length;
+  document.getElementById('stat-gorüsüldü').textContent = leads.filter(l=>l.status==='görüşüldü').length;
+  const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate()-7);
+  document.getElementById('stat-week').textContent = leads.filter(l=>new Date(l.created_at)>weekAgo).length;
+}
+
+function renderLeads(leads) {
+  const tbody = document.getElementById('leads-table');
+  if (!leads.length) {
+    tbody.innerHTML = '<tr><td colspan="6" class="text-center py-16 text-gray-500">Henüz lead yok.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = leads.map(l => `
+    <tr class="border-b border-gray-800/50 hover:bg-gray-800/40 cursor-pointer transition-colors" onclick="openModal('${l.id}')">
+      <td class="px-5 py-4 font-semibold text-white">${l.name || '—'}</td>
+      <td class="px-5 py-4 text-gray-300">
+        <div>${l.email || '—'}</div>
+        <div class="text-gray-500 text-xs">${l.phone || ''}</div>
+      </td>
+      <td class="px-5 py-4 text-gray-400 text-xs">${l.website || '—'}</td>
+      <td class="px-5 py-4 text-gray-400 text-xs max-w-[140px] truncate">${l.note || '—'}</td>
+      <td class="px-5 py-4 text-gray-500 text-xs">${new Date(l.created_at).toLocaleDateString('tr-TR',{day:'2-digit',month:'short',year:'numeric'})}</td>
+      <td class="px-5 py-4">
+        <span class="px-2 py-1 rounded-full text-xs font-bold ${statusColor(l.status)}">${l.status}</span>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function statusColor(s) {
+  if(s==='bekliyor') return 'bg-yellow-400/15 text-yellow-400';
+  if(s==='görüşüldü') return 'bg-green-400/15 text-green-400';
+  if(s==='reddedildi') return 'bg-red-400/15 text-red-400';
+  return 'bg-gray-700 text-gray-400';
+}
+
+function filterLeads(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-lead-btn').forEach(b => {
+    b.classList.remove('bg-green-400','text-gray-900');
+    b.classList.add('bg-gray-800','text-gray-400');
+  });
+  event.currentTarget.classList.add('bg-green-400','text-gray-900');
+  event.currentTarget.classList.remove('bg-gray-800','text-gray-400');
+  const filtered = f === 'tumu' ? allLeads : allLeads.filter(l=>l.status===f);
+  renderLeads(filtered);
+}
+
+// --- MODAL ---
+function openModal(id) {
+  const l = allLeads.find(x=>x.id===id);
+  if(!l) return;
+  currentLeadId = id;
+  document.getElementById('modal-name').textContent = l.name || '—';
+  document.getElementById('modal-email').textContent = l.email || '—';
+  document.getElementById('modal-phone').textContent = l.phone || '—';
+  document.getElementById('modal-website').textContent = l.website || '—';
+  document.getElementById('modal-note').textContent = l.note || '—';
+  document.getElementById('modal-date').textContent = new Date(l.created_at).toLocaleString('tr-TR');
+  document.getElementById('lead-modal').classList.remove('hidden');
+}
+
+function closeModal() { document.getElementById('lead-modal').classList.add('hidden'); }
+
+async function updateStatus(status) {
+  await fetch(`${SUPABASE_URL}/rest/v1/leads?id=eq.${currentLeadId}`, {
+    method: 'PATCH',
+    headers: { 'apikey': SERVICE_KEY, 'Authorization': 'Bearer '+SERVICE_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+    body: JSON.stringify({ status })
+  });
+  closeModal();
+  await loadLeads();
+}
+
+// --- STATS ---
+function renderStats() {
+  // 7-day bar chart
+  const bars = document.getElementById('chart-bars');
+  const labels = document.getElementById('chart-labels');
+  const days = [];
+  for(let i=6; i>=0; i--) {
+    const d = new Date(); d.setDate(d.getDate()-i);
+    const count = allLeads.filter(l => new Date(l.created_at).toDateString()===d.toDateString()).length;
+    days.push({ label: d.toLocaleDateString('tr-TR',{weekday:'short'}), count });
+  }
+  const max = Math.max(...days.map(d=>d.count), 1);
+  bars.innerHTML = days.map(d=>`
+    <div class="flex-1 flex flex-col items-center gap-1">
+      <div class="text-xs text-green-400 font-bold">${d.count||''}</div>
+      <div class="w-full bg-green-400/20 rounded-t" style="height:${Math.max(d.count/max*100,4)}px;background:${d.count>0?'#4ade80':'#374151'}"></div>
+    </div>
+  `).join('');
+  labels.innerHTML = days.map(d=>`<div class="flex-1 text-center text-xs text-gray-500">${d.label}</div>`).join('');
+
+  // Status breakdown
+  const statuses = ['bekliyor','görüşüldü','reddedildi'];
+  const total = allLeads.length || 1;
+  document.getElementById('status-breakdown').innerHTML = statuses.map(s => {
+    const count = allLeads.filter(l=>l.status===s).length;
+    const pct = Math.round(count/total*100);
+    return `
+      <div>
+        <div class="flex justify-between text-xs mb-1"><span class="text-gray-300 capitalize">${s}</span><span class="text-white font-bold">${count}</span></div>
+        <div class="h-2 bg-gray-800 rounded-full overflow-hidden"><div class="h-full rounded-full ${s==='bekliyor'?'bg-yellow-400':s==='görüşüldü'?'bg-green-400':'bg-red-400'}" style="width:${pct}%"></div></div>
+      </div>`;
+  }).join('');
+
+  // Monthly
+  const monthAgo = new Date(); monthAgo.setDate(monthAgo.getDate()-30);
+  const monthLeads = allLeads.filter(l=>new Date(l.created_at)>monthAgo);
+  document.getElementById('monthly-stats').innerHTML = `
+    <div class="flex justify-between"><span class="text-gray-400 text-sm">Toplam Lead</span><span class="text-white font-bold">${monthLeads.length}</span></div>
+    <div class="flex justify-between"><span class="text-gray-400 text-sm">Görüşülen</span><span class="text-green-400 font-bold">${monthLeads.filter(l=>l.status==='görüşüldü').length}</span></div>
+    <div class="flex justify-between"><span class="text-gray-400 text-sm">Dönüşüm Oranı</span><span class="text-white font-bold">${monthLeads.length ? Math.round(monthLeads.filter(l=>l.status==='görüşüldü').length/monthLeads.length*100) : 0}%</span></div>
+    <div class="flex justify-between"><span class="text-gray-400 text-sm">Bekleyen</span><span class="text-yellow-400 font-bold">${monthLeads.filter(l=>l.status==='bekliyor').length}</span></div>
+  `;
+}
+
+document.getElementById('lead-modal').addEventListener('click', function(e) {
+  if(e.target===this) closeModal();
+});
+</script>
+</body>
+</html>

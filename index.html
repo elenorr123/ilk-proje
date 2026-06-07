@@ -489,46 +489,87 @@
 
 <!-- How It Works Section -->
 <section class="py-stack-lg bg-primary-container border-b-4 border-primary" id="how">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="text-center mb-16">
+  <div class="max-w-[1300px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-20">
       <h2 class="font-headline-lg text-surface-bright uppercase">Nasıl <span class="text-secondary-fixed">Çalışır?</span></h2>
-      <p class="text-on-primary-container font-body-md mt-4 max-w-xl mx-auto">Onboardingten ilk satışa kadar her adımı yönetiyoruz.</p>
+      <p class="text-on-primary-container font-body-md mt-4 max-w-xl mx-auto">İlk toplantıdan ilk satışa — her adımı birlikte yönetiyoruz.</p>
     </div>
-    <div class="grid md:grid-cols-4 gap-gutter relative">
-      <!-- connector line desktop -->
-      <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-1 bg-secondary-fixed z-0"></div>
 
-      <!-- Step 1 -->
-      <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
-          <span class="font-display text-headline-md text-on-secondary-fixed font-black">01</span>
+    <!-- SCHEMATIC FLOW: scroll yatay mobilde, masaüstünde tam yatay -->
+    <div class="overflow-x-auto -mx-4 px-4">
+      <div style="display:flex; flex-direction:row; align-items:center; gap:0; min-width:700px;">
+
+        <!-- STEP 1 -->
+        <div style="position:relative; flex:1; background:#fff; border:3px solid #0d0d0d; box-shadow:5px 5px 0 #0d0d0d;">
+          <div style="position:absolute; top:-14px; left:-3px; background:#b9ff66; border:3px solid #0d0d0d; padding:2px 10px;">
+            <span style="font-weight:900; font-size:13px; color:#0d0d0d;">01</span>
+          </div>
+          <div style="padding:28px 20px 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-bottom:14px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <div style="font-weight:900; font-size:15px; color:#0d0d0d; text-transform:uppercase; line-height:1.25; margin-bottom:10px;">Toplantı &amp;<br/>Tanışma</div>
+            <div style="font-size:13px; color:#555; line-height:1.5;">İşinizi ve hedeflerinizi dinliyoruz. Doğru iş birliği için önce birbirimizi tanıyoruz.</div>
+          </div>
         </div>
-        <h3 class="font-headline-md text-surface-bright mb-3">Ücretsiz Audit</h3>
-        <p class="font-body-md text-on-primary-container">Mevcut kampanyalarınızı analiz ediyor, kayıp noktaları tespit ediyoruz.</p>
-      </div>
-      <!-- Step 2 -->
-      <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
-          <span class="font-display text-headline-md text-on-secondary-fixed font-black">02</span>
+
+        <!-- ARROW -->
+        <div style="flex-shrink:0; padding:0 8px; display:flex; align-items:center;">
+          <svg style="width:36px;height:36px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
         </div>
-        <h3 class="font-headline-md text-surface-bright mb-3">Strateji</h3>
-        <p class="font-body-md text-on-primary-container">Sektörünüze özel büyüme planı hazırlıyor, hedefleri netleştiriyoruz.</p>
-      </div>
-      <!-- Step 3 -->
-      <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-20 h-20 bg-secondary-fixed border-4 border-primary neo-brutal-shadow flex items-center justify-center mb-6">
-          <span class="font-display text-headline-md text-on-secondary-fixed font-black">03</span>
+
+        <!-- STEP 2 -->
+        <div style="position:relative; flex:1; background:#fff; border:3px solid #0d0d0d; box-shadow:5px 5px 0 #0d0d0d;">
+          <div style="position:absolute; top:-14px; left:-3px; background:#b9ff66; border:3px solid #0d0d0d; padding:2px 10px;">
+            <span style="font-weight:900; font-size:13px; color:#0d0d0d;">02</span>
+          </div>
+          <div style="padding:28px 20px 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-bottom:14px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+            <div style="font-weight:900; font-size:15px; color:#0d0d0d; text-transform:uppercase; line-height:1.25; margin-bottom:10px;">Analiz &amp;<br/>Strateji</div>
+            <div style="font-size:13px; color:#555; line-height:1.5;">Sektörünüzü ve büyüme fırsatlarını analiz ederek size özel yol haritası çıkarıyoruz.</div>
+          </div>
         </div>
-        <h3 class="font-headline-md text-surface-bright mb-3">Lansman</h3>
-        <p class="font-body-md text-on-primary-container">Kampanyaları kuruyoruz, tracking yapılandırıyor, veriyi toplamaya başlıyoruz.</p>
-      </div>
-      <!-- Step 4 -->
-      <div class="relative z-10 flex flex-col items-center text-center">
-        <div class="w-20 h-20 bg-primary border-4 border-secondary-fixed neo-brutal-shadow flex items-center justify-center mb-6">
-          <span class="font-display text-headline-md text-secondary-fixed font-black">04</span>
+
+        <!-- ARROW -->
+        <div style="flex-shrink:0; padding:0 8px; display:flex; align-items:center;">
+          <svg style="width:36px;height:36px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
         </div>
-        <h3 class="font-headline-md text-surface-bright mb-3">Ölçeklenme</h3>
-        <p class="font-body-md text-on-primary-container">Çalışanı 2x, 5x büyütüyor. Çalışmayanı anlık durduruyoruz.</p>
+
+        <!-- STEP 3 -->
+        <div style="position:relative; flex:1.3; background:#fff; border:3px solid #0d0d0d; box-shadow:5px 5px 0 #0d0d0d;">
+          <div style="position:absolute; top:-14px; left:-3px; background:#b9ff66; border:3px solid #0d0d0d; padding:2px 10px;">
+            <span style="font-weight:900; font-size:13px; color:#0d0d0d;">03</span>
+          </div>
+          <div style="padding:28px 20px 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-bottom:14px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+            <div style="font-weight:900; font-size:15px; color:#0d0d0d; text-transform:uppercase; line-height:1.25; margin-bottom:10px;">Entegrasyon,<br/>Kampanya &amp;<br/>Funnel Kurgusu</div>
+            <div style="font-size:13px; color:#555; line-height:1.5;">Araçları bağlıyor, kampanyaları kuruyor, satış funnelini baştan sona yapılandırıyoruz.</div>
+          </div>
+        </div>
+
+        <!-- ARROW -->
+        <div style="flex-shrink:0; padding:0 8px; display:flex; align-items:center;">
+          <svg style="width:36px;height:36px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M14 6l6 6-6 6"/></svg>
+        </div>
+
+        <!-- STEP 4 — accent -->
+        <div style="position:relative; flex:1; background:#b9ff66; border:3px solid #0d0d0d; box-shadow:5px 5px 0 #0d0d0d;">
+          <div style="position:absolute; top:-14px; left:-3px; background:#0d0d0d; border:3px solid #b9ff66; padding:2px 10px;">
+            <span style="font-weight:900; font-size:13px; color:#b9ff66;">04</span>
+          </div>
+          <div style="padding:28px 20px 24px;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-bottom:14px;color:#0d0d0d;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+            </svg>
+            <div style="font-weight:900; font-size:15px; color:#0d0d0d; text-transform:uppercase; line-height:1.25; margin-bottom:10px;">Ölçeklenme</div>
+            <div style="font-size:13px; color:#0d0d0d; line-height:1.5;">Çalışanı 2x, 5x büyütüyor. Çalışmayanı anlık durduruyoruz. Veri her kararı yönlendiriyor.</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1119,10 +1160,39 @@
     });
   });
 
-  // Meeting Form submit
-  document.getElementById('meeting-form').addEventListener('submit', function(e) {
+  // Meeting Form — Supabase'e kaydet
+  document.getElementById('meeting-form').addEventListener('submit', async function(e) {
     e.preventDefault();
-    window.location.href = 'tesekkurler.html';
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Gönderiliyor...';
+    btn.disabled = true;
+
+    const fields = this.querySelectorAll('input, textarea');
+    const data = {
+      name: fields[0].value,
+      phone: fields[1].value,
+      email: fields[2].value,
+      website: fields[3].value,
+      note: fields[4].value,
+      status: 'bekliyor'
+    };
+
+    try {
+      await fetch('https://jqwymnmahwacqchtgzos.supabase.co/rest/v1/leads', {
+        method: 'POST',
+        headers: {
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impxd3ltbm1haHdhY3FjaHRnem9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTM3NjYsImV4cCI6MjA5NjMyOTc2Nn0.zn_9uJ9_ryTgfqqQqbQymmaB_-L0f2-mAGLCl0ep0vg',
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(data)
+      });
+      window.location.href = 'tesekkurler.html';
+    } catch(err) {
+      btn.textContent = 'Hata oluştu, tekrar deneyin';
+      btn.disabled = false;
+    }
   });
 
   // Contact Form submit (placeholder)
