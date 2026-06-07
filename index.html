@@ -1179,7 +1179,7 @@
     });
   });
 
-  // Meeting Form — Supabase'e kaydet
+  // Meeting Form — Supabase'e kaydet + yönlendir
   document.getElementById('meeting-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
@@ -1207,10 +1207,10 @@
         },
         body: JSON.stringify(data)
       });
-      window.location.href = 'tesekkurler.html';
     } catch(err) {
-      btn.textContent = 'Hata oluştu, tekrar deneyin';
-      btn.disabled = false;
+      console.error('Supabase hatası:', err);
+    } finally {
+      window.location.href = 'tesekkurler.html';
     }
   });
 
@@ -1242,10 +1242,10 @@
         },
         body: JSON.stringify(data)
       });
-      window.location.href = 'tesekkurler.html';
     } catch(err) {
-      btn.textContent = 'Hata oluştu, tekrar deneyin';
-      btn.disabled = false;
+      console.error('Supabase hatası:', err);
+    } finally {
+      window.location.href = 'tesekkurler.html';
     }
   });
 </script>
