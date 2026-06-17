@@ -489,107 +489,94 @@
 
 <!-- How It Works Section -->
 <section class="py-stack-lg bg-primary-container border-b-4 border-primary" id="how">
-  <div class="max-w-[1300px] mx-auto px-margin-mobile md:px-margin-desktop">
+  <div class="max-w-[900px] mx-auto px-margin-mobile md:px-margin-desktop">
     <div class="text-center mb-20">
       <h2 class="font-headline-lg text-surface-bright uppercase">Nasıl <span class="text-secondary-fixed">Çalışır?</span></h2>
       <p class="text-on-primary-container font-body-md mt-4 max-w-xl mx-auto">İlk toplantıdan ilk satışa — her adımı birlikte yönetiyoruz.</p>
     </div>
 
-    <!-- SCHEMATIC FLOW -->
     <style>
-      .how-flow { display:flex; flex-direction:column; align-items:stretch; gap:0; }
-      .how-arrow-h { display:none; }
-      .how-arrow-v { flex-shrink:0; display:flex; align-items:center; justify-content:center; padding:4px 0; }
-      @media (min-width:768px) {
-        .how-flow { flex-direction:row; align-items:stretch; }
-        .how-arrow-h { flex-shrink:0; width:52px; display:flex; align-items:center; justify-content:center; }
-        .how-arrow-v { display:none; }
+      .how-steps { display:flex; flex-direction:column; gap:0; position:relative; }
+      .how-step { display:grid; grid-template-columns:80px 1fr; gap:0; align-items:stretch; }
+      .how-step-left { display:flex; flex-direction:column; align-items:center; }
+      .how-step-num {
+        width:64px; height:64px; background:#b9ff66; border:4px solid #0d0d0d;
+        display:flex; align-items:center; justify-content:center;
+        font-size:20px; font-weight:900; color:#0d0d0d; flex-shrink:0;
+        position:relative; z-index:1;
+      }
+      .how-step-line { width:4px; background:#b9ff66; flex:1; opacity:.35; }
+      .how-step:last-child .how-step-line { display:none; }
+      .how-step-body {
+        background:#fff; border:4px solid #0d0d0d; box-shadow:5px 5px 0 #0d0d0d;
+        padding:32px 36px; margin-bottom:24px; margin-left:16px;
+      }
+      .how-step:last-child .how-step-body { background:#b9ff66; }
+      .how-step-tag { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#888; margin-bottom:10px; }
+      .how-step:last-child .how-step-tag { color:#0d0d0d; opacity:.6; }
+      .how-step-title { font-size:22px; font-weight:900; text-transform:uppercase; color:#0d0d0d; line-height:1.2; margin-bottom:12px; }
+      .how-step-desc { font-size:14px; color:#444; line-height:1.7; }
+      .how-step:last-child .how-step-desc { color:#0d0d0d; }
+      @media(min-width:640px){
+        .how-step { grid-template-columns:100px 1fr; }
+        .how-step-num { width:72px; height:72px; font-size:22px; }
+        .how-step-title { font-size:24px; }
       }
     </style>
-    <div>
-      <div class="how-flow">
+    <div class="how-steps">
 
-        <!-- STEP 1 -->
-        <div style="position:relative; flex:1; background:#fff; border:4px solid #0d0d0d; box-shadow:6px 6px 0 #0d0d0d;">
-          <div style="position:absolute; top:-18px; left:-4px; background:#b9ff66; border:4px solid #0d0d0d; padding:3px 14px;">
-            <span style="font-weight:900; font-size:14px; color:#0d0d0d; letter-spacing:1px;">01</span>
-          </div>
-          <div style="padding:40px 28px 32px; display:flex; flex-direction:column; gap:16px; height:100%;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="width:44px;height:44px;color:#0d0d0d;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-            <div style="font-weight:900; font-size:18px; color:#0d0d0d; text-transform:uppercase; line-height:1.2;">Toplantı &amp;<br/>Tanışma</div>
-            <div style="font-size:14px; color:#444; line-height:1.6;">İşinizi ve hedeflerinizi dinliyoruz. Doğru iş birliği için önce birbirimizi tanıyoruz.</div>
-          </div>
+      <!-- STEP 1 -->
+      <div class="how-step">
+        <div class="how-step-left">
+          <div class="how-step-num">01</div>
+          <div class="how-step-line"></div>
         </div>
-
-        <!-- ARROW -->
-        <div class="how-arrow-h">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M8 4l8 8-8 8V4z"/></svg>
+        <div class="how-step-body">
+          <div class="how-step-tag">Hafta 1</div>
+          <div class="how-step-title">Toplantı &amp; Tanışma</div>
+          <div class="how-step-desc">İşinizi, hedeflerinizi ve rakiplerinizi dinliyoruz. Doğru iş birliği için önce birbirimizi tanıyoruz. Bu görüşme tamamen ücretsiz.</div>
         </div>
-        <div class="how-arrow-v">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8l8 8 8-8H4z"/></svg>
-        </div>
-
-        <!-- STEP 2 -->
-        <div style="position:relative; flex:1; background:#fff; border:4px solid #0d0d0d; box-shadow:6px 6px 0 #0d0d0d;">
-          <div style="position:absolute; top:-18px; left:-4px; background:#b9ff66; border:4px solid #0d0d0d; padding:3px 14px;">
-            <span style="font-weight:900; font-size:14px; color:#0d0d0d; letter-spacing:1px;">02</span>
-          </div>
-          <div style="padding:40px 28px 32px; display:flex; flex-direction:column; gap:16px; height:100%;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="width:44px;height:44px;color:#0d0d0d;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
-            <div style="font-weight:900; font-size:18px; color:#0d0d0d; text-transform:uppercase; line-height:1.2;">Analiz &amp;<br/>Strateji</div>
-            <div style="font-size:14px; color:#444; line-height:1.6;">Sektörünüzü ve büyüme fırsatlarını analiz ederek size özel yol haritası çıkarıyoruz.</div>
-          </div>
-        </div>
-
-        <!-- ARROW -->
-        <div class="how-arrow-h">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M8 4l8 8-8 8V4z"/></svg>
-        </div>
-        <div class="how-arrow-v">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8l8 8 8-8H4z"/></svg>
-        </div>
-
-        <!-- STEP 3 -->
-        <div style="position:relative; flex:1.4; background:#fff; border:4px solid #0d0d0d; box-shadow:6px 6px 0 #0d0d0d;">
-          <div style="position:absolute; top:-18px; left:-4px; background:#b9ff66; border:4px solid #0d0d0d; padding:3px 14px;">
-            <span style="font-weight:900; font-size:14px; color:#0d0d0d; letter-spacing:1px;">03</span>
-          </div>
-          <div style="padding:40px 28px 32px; display:flex; flex-direction:column; gap:16px; height:100%;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="width:44px;height:44px;color:#0d0d0d;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-            </svg>
-            <div style="font-weight:900; font-size:18px; color:#0d0d0d; text-transform:uppercase; line-height:1.2;">Entegrasyon,<br/>Kampanya &amp;<br/>Funnel Kurgusu</div>
-            <div style="font-size:14px; color:#444; line-height:1.6;">Araçları bağlıyor, kampanyaları kuruyor, satış funnelini baştan sona yapılandırıyoruz.</div>
-          </div>
-        </div>
-
-        <!-- ARROW -->
-        <div class="how-arrow-h">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M8 4l8 8-8 8V4z"/></svg>
-        </div>
-        <div class="how-arrow-v">
-          <svg style="width:40px;height:40px;color:#b9ff66;" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8l8 8 8-8H4z"/></svg>
-        </div>
-
-        <!-- STEP 4 — accent -->
-        <div style="position:relative; flex:1; background:#b9ff66; border:4px solid #0d0d0d; box-shadow:6px 6px 0 #0d0d0d;">
-          <div style="position:absolute; top:-18px; left:-4px; background:#0d0d0d; border:4px solid #b9ff66; padding:3px 14px;">
-            <span style="font-weight:900; font-size:14px; color:#b9ff66; letter-spacing:1px;">04</span>
-          </div>
-          <div style="padding:40px 28px 32px; display:flex; flex-direction:column; gap:16px; height:100%;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="width:44px;height:44px;color:#0d0d0d;flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-            </svg>
-            <div style="font-weight:900; font-size:18px; color:#0d0d0d; text-transform:uppercase; line-height:1.2;">Ölçeklenme</div>
-            <div style="font-size:14px; color:#0d0d0d; line-height:1.6;">Çalışanı 2x, 5x büyütüyor. Çalışmayanı anlık durduruyoruz. Veri her kararı yönlendiriyor.</div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- STEP 2 -->
+      <div class="how-step">
+        <div class="how-step-left">
+          <div class="how-step-num">02</div>
+          <div class="how-step-line"></div>
+        </div>
+        <div class="how-step-body">
+          <div class="how-step-tag">Hafta 1–2</div>
+          <div class="how-step-title">Analiz &amp; Strateji</div>
+          <div class="how-step-desc">Mevcut kampanyalarınızı, dönüşüm hunisini ve rakip reklamlarını inceliyoruz. Size özel büyüme yol haritası oluşturuyoruz.</div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="how-step">
+        <div class="how-step-left">
+          <div class="how-step-num">03</div>
+          <div class="how-step-line"></div>
+        </div>
+        <div class="how-step-body">
+          <div class="how-step-tag">Hafta 2–4</div>
+          <div class="how-step-title">Entegrasyon &amp; Kampanya Kurgusu</div>
+          <div class="how-step-desc">Tracking araçlarını bağlıyor, kampanyaları yapılandırıyor, satış funnelini baştan sona kuruyoruz. Bütçe boşa gitmiyor.</div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="how-step">
+        <div class="how-step-left">
+          <div class="how-step-num">04</div>
+          <div class="how-step-line"></div>
+        </div>
+        <div class="how-step-body">
+          <div class="how-step-tag">Sürekli</div>
+          <div class="how-step-title">Ölçeklendirme</div>
+          <div class="how-step-desc">Çalışanı 2x, 5x büyütüyoruz. Çalışmayanı anlık durduruyoruz. Her karar veriye dayanıyor, her hafta raporlanıyor.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
