@@ -1247,5 +1247,47 @@ src="https://www.facebook.com/tr?id=1994951467985604&ev=PageView&noscript=1"
     // Form action="tesekkurler.html" ile otomatik yönlenir
   });
 </script>
+
+<script>
+  // CAPI + Pixel çift tetikleme
+  function sendCapiEvent(eventName) {
+    // 1. Browser pixel
+    if (typeof fbq !== 'undefined') fbq('track', eventName);
+    // 2. Server-side CAPI
+    var fbc = document.cookie.match(/_fbc=([^;]+)/);
+    var fbp = document.cookie.match(/_fbp=([^;]+)/);
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: eventName,
+        event_source_url: window.location.href,
+        client_user_agent: navigator.userAgent,
+        fbc: fbc ? fbc[1] : null,
+        fbp: fbp ? fbp[1] : null,
+      }),
+    });
+  }
+
+  // "Toplantı Talep Et" butonlarını izle
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href="#meeting"]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        sendCapiEvent('Lead');
+      });
+    });
+
+    // Calendly widget açılınca InitiateCheckout
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.event && e.data.event === 'calendly.event_type_viewed') {
+        sendCapiEvent('InitiateCheckout');
+      }
+      // Calendly toplantı zamanlandığında Schedule event
+      if (e.data && e.data.event && e.data.event === 'calendly.event_scheduled') {
+        sendCapiEvent('Schedule');
+      }
+    });
+  });
+</script>
 </body>
 </html>
