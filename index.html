@@ -99,7 +99,7 @@
   .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
   .ticker-track { display: flex; gap: 48px; animation: ticker 28s linear infinite; white-space: nowrap; }
   @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
   .faq-answer.open { max-height: 400px; }
   .mobile-menu { display: none; }
   .mobile-menu.open { display: flex; }
@@ -1141,13 +1141,14 @@
       const item = toggle.closest('.faq-item');
       const answer = item.querySelector('.faq-answer');
       const icon = toggle.querySelector('.faq-icon');
-      const isOpen = answer.classList.contains('open');
+      const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
-      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-answer').forEach(a => { a.style.maxHeight = '0px'; a.style.overflow = 'hidden'; });
       document.querySelectorAll('.faq-icon').forEach(i => { i.textContent = 'add'; });
 
       if (!isOpen) {
-        answer.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.overflow = 'hidden';
         icon.textContent = 'remove';
       }
     });
