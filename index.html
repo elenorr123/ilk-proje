@@ -254,58 +254,30 @@
   </div>
 </section>
 
-<!-- Meeting Form Section -->
+<!-- Meeting / Calendly Section -->
 <section class="py-stack-lg grid-pattern border-b-4 border-primary">
-  <div class="max-w-[640px] mx-auto px-margin-mobile md:px-margin-desktop">
+  <div class="max-w-[760px] mx-auto px-margin-mobile md:px-margin-desktop">
     <div class="text-center mb-10">
       <div class="inline-block bg-secondary-fixed px-3 py-1 border-2 border-primary font-label-bold text-on-secondary-fixed mb-4">ÜCRETSİZ</div>
       <h2 class="font-headline-lg text-primary uppercase">Toplantı <span class="bg-secondary-fixed">Planla</span></h2>
       <p class="text-on-surface-variant font-body-md mt-3">30 dakikada reklamlarınızı birlikte inceleyelim.</p>
     </div>
-    <form class="bg-white border-4 border-primary neo-brutal-shadow-lg p-8 space-y-5" id="meeting-form" action="tesekkurler.html">
-      <div class="bg-surface-container-low border-2 border-outline-variant p-4 flex gap-3 items-start">
-        <span class="material-symbols-outlined text-secondary mt-0.5" style="font-size:20px;font-variation-settings:'FILL' 1;">info</span>
-        <p class="text-xs text-on-surface-variant leading-relaxed">
-          <span class="font-bold text-on-surface">Bu danışmanlık kimler için uygundur?</span><br/>
-          Aylık en az <span class="font-bold text-on-surface">50.000₺ – 100.000₺</span> reklam harcaması yapan ya da yapmayı planlayan işletmeler için en yüksek verimi sunabiliyorum. Daha küçük bütçeler için şu an yer açamıyorum.
-        </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="font-label-bold text-on-surface block mb-2">Ad Soyad *</label>
-          <input type="text" required placeholder="Adınız Soyadınız"
-            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
-        </div>
-        <div>
-          <label class="font-label-bold text-on-surface block mb-2">Telefon *</label>
-          <input type="tel" required placeholder="+90 5xx xxx xx xx"
-            class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
-        </div>
-      </div>
-      <div>
-        <label class="font-label-bold text-on-surface block mb-2">E-posta *</label>
-        <input type="email" required placeholder="siz@sirket.com"
-          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
-      </div>
-      <div>
-        <label class="font-label-bold text-on-surface block mb-2">Şirket / Web Sitesi</label>
-        <input type="text" placeholder="https://siteniz.com"
-          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed"/>
-      </div>
-      <div>
-        <label class="font-label-bold text-on-surface block mb-2">Kısa Not (opsiyonel)</label>
-        <textarea rows="2" placeholder="Neyle ilgili konuşmak istediğinizi kısaca yazın..."
-          class="w-full border-2 border-primary px-4 py-3 font-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary-fixed resize-none"></textarea>
-      </div>
-      <button type="submit"
-        class="w-full py-4 bg-secondary-fixed text-on-secondary-fixed border-4 border-primary font-headline-md neo-brutal-shadow hover:translate-y-[-2px] transition-transform neo-brutal-btn">
-        Toplantı Talep Et →
-      </button>
-      <div class="flex items-center justify-center gap-2 text-on-surface-variant">
-        <span class="material-symbols-outlined text-secondary" style="font-size:18px;font-variation-settings:'FILL' 1;">schedule</span>
-        <p class="text-sm font-label-bold">Formu doldurmanız yeterli — en kısa sürede size dönüyorum.</p>
-      </div>
-    </form>
+
+    <!-- Info kutusu -->
+    <div class="bg-primary border-4 border-primary p-5 flex gap-4 items-start neo-brutal-shadow mb-8">
+      <span class="material-symbols-outlined mt-0.5" style="color:#6bff8f;font-size:20px;font-variation-settings:'FILL' 1;">info</span>
+      <p style="color:#e8f5e8;" class="text-sm leading-relaxed">
+        <span style="color:#6bff8f;" class="font-bold">BU DANIŞMANLIK KİMLER İÇİN UYGUNDUR?</span><br/>
+        Aylık en az <span style="color:#6bff8f;" class="font-bold">100.000₺</span> reklam harcaması yapan ya da yapmayı planlayan işletmeler için en yüksek verimi sunabiliyorum. Daha küçük bütçeler için şu an yer açamıyorum.
+      </p>
+    </div>
+
+    <!-- Calendly -->
+    <div class="border-4 border-primary neo-brutal-shadow overflow-hidden bg-white">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mertcanesmer2?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+
   </div>
 </section>
 
