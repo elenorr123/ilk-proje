@@ -168,11 +168,15 @@
           <source src="mc-esmer-01-1_kB84WWSL.mp4" type="video/mp4"/>
         </video>
         <!-- Alt kontrol çubuğu -->
-        <div style="position:absolute;bottom:0;left:0;right:0;z-index:10;background:linear-gradient(transparent,rgba(0,0,0,0.75));padding:32px 12px 12px 12px;">
-          <!-- Progress bar -->
-          <div id="hero-progress-track" onclick="heroSeek(event)" style="width:100%;height:4px;background:rgba(255,255,255,0.3);cursor:pointer;margin-bottom:10px;position:relative;">
-            <div id="hero-progress-fill" style="height:100%;background:#6bff8f;width:0%;pointer-events:none;"></div>
-          </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:10;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:28px 12px 12px 12px;">
+          <!-- Seek range -->
+          <style>
+            #hero-seek{-webkit-appearance:none;appearance:none;width:100%;height:4px;background:rgba(255,255,255,0.25);outline:none;cursor:pointer;margin-bottom:10px;display:block;}
+            #hero-seek::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#6bff8f;cursor:pointer;}
+            #hero-seek::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#6bff8f;cursor:pointer;border:none;}
+            #hero-seek::-webkit-slider-runnable-track{background:linear-gradient(to right,#6bff8f var(--prog,0%),rgba(255,255,255,0.25) var(--prog,0%));}
+          </style>
+          <input type="range" id="hero-seek" min="0" max="1000" value="0" step="1"/>
           <!-- Butonlar -->
           <div style="display:flex;gap:8px;align-items:center;">
             <button id="hero-play-btn" onclick="toggleHeroPlay()" style="background:transparent;color:#fff;border:2px solid #fff;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
@@ -191,10 +195,31 @@
     <script>
       (function(){
         var v = document.getElementById('hero-video');
-        var fill = document.getElementById('hero-progress-fill');
+        var seek = document.getElementById('hero-seek');
+        var seeking = false;
+        // Video ilerledikçe bar'ı güncelle
         v.addEventListener('timeupdate', function(){
-          if(v.duration) fill.style.width = (v.currentTime / v.duration * 100) + '%';
+          if(!seeking && v.duration){
+            var val = (v.currentTime / v.duration) * 1000;
+            seek.value = val;
+            seek.style.setProperty('--prog', (val/10)+'%');
+          }
         });
+        // Sürükleme başlayınca videoyu durdur
+        seek.addEventListener('mousedown', function(){ seeking = true; });
+        seek.addEventListener('touchstart', function(){ seeking = true; });
+        // Değer değişince video konumunu güncelle
+        seek.addEventListener('input', function(){
+          if(v.duration) v.currentTime = (seek.value / 1000) * v.duration;
+          seek.style.setProperty('--prog', (seek.value/10)+'%');
+        });
+        // Bırakınca devam et
+        seek.addEventListener('change', function(){
+          seeking = false;
+          if(v.duration) v.currentTime = (seek.value / 1000) * v.duration;
+        });
+        seek.addEventListener('mouseup', function(){ seeking = false; });
+        seek.addEventListener('touchend', function(){ seeking = false; });
       })();
       function toggleHeroPlay() {
         var v = document.getElementById('hero-video');
@@ -225,13 +250,6 @@
           iconMuted.style.display = 'none';
           iconUnmuted.style.display = '';
         }
-      }
-      function heroSeek(e) {
-        var v = document.getElementById('hero-video');
-        var track = document.getElementById('hero-progress-track');
-        var rect = track.getBoundingClientRect();
-        var pct = (e.clientX - rect.left) / rect.width;
-        v.currentTime = pct * v.duration;
       }
     </script>
   </div>
