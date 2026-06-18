@@ -1016,7 +1016,7 @@
     <div id="faq-list">
 
       <div class="faq-item border-t-4 border-primary">
-        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4">
+        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4" onclick="faqToggle(this)">
           <span class="font-headline-md text-primary">Minimum bütçe nedir?</span>
           <span class="material-symbols-outlined faq-icon flex-shrink-0 text-secondary-fixed" style="font-size:28px;">add</span>
         </button>
@@ -1026,7 +1026,7 @@
       </div>
 
       <div class="faq-item border-t-4 border-primary">
-        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4">
+        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4" onclick="faqToggle(this)">
           <span class="font-headline-md text-primary">Sonuçlar ne zaman başlar?</span>
           <span class="material-symbols-outlined faq-icon flex-shrink-0 text-secondary-fixed" style="font-size:28px;">add</span>
         </button>
@@ -1036,7 +1036,7 @@
       </div>
 
       <div class="faq-item border-t-4 border-primary">
-        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4">
+        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4" onclick="faqToggle(this)">
           <span class="font-headline-md text-primary">Sözleşme süresi var mı?</span>
           <span class="material-symbols-outlined faq-icon flex-shrink-0 text-secondary-fixed" style="font-size:28px;">add</span>
         </button>
@@ -1046,7 +1046,7 @@
       </div>
 
       <div class="faq-item border-t-4 border-primary">
-        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4">
+        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4" onclick="faqToggle(this)">
           <span class="font-headline-md text-primary">Hangi sektörlerde çalışıyorsunuz?</span>
           <span class="material-symbols-outlined faq-icon flex-shrink-0 text-secondary-fixed" style="font-size:28px;">add</span>
         </button>
@@ -1056,7 +1056,7 @@
       </div>
 
       <div class="faq-item border-t-4 border-b-4 border-primary">
-        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4">
+        <button class="faq-toggle w-full flex justify-between items-center py-6 text-left gap-4" onclick="faqToggle(this)">
           <span class="font-headline-md text-primary">Raporlama nasıl yapılıyor?</span>
           <span class="material-symbols-outlined faq-icon flex-shrink-0 text-secondary-fixed" style="font-size:28px;">add</span>
         </button>
@@ -1115,6 +1115,19 @@
 </footer>
 
 <script>
+  function faqToggle(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var icon = btn.querySelector('.faq-icon');
+    var isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+    document.querySelectorAll('.faq-answer').forEach(function(a){ a.style.maxHeight='0px'; });
+    document.querySelectorAll('.faq-icon').forEach(function(i){ i.textContent='add'; });
+    if (!isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      icon.textContent = 'remove';
+    }
+  }
+
   // Mobile Menu Toggle
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -1135,24 +1148,7 @@
     button.addEventListener('mouseup', () => button.style.transform = '');
   });
 
-  // FAQ Accordion
-  document.querySelectorAll('.faq-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const item = toggle.closest('.faq-item');
-      const answer = item.querySelector('.faq-answer');
-      const icon = toggle.querySelector('.faq-icon');
-      const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-      document.querySelectorAll('.faq-answer').forEach(a => { a.style.maxHeight = '0px'; a.style.overflow = 'hidden'; });
-      document.querySelectorAll('.faq-icon').forEach(i => { i.textContent = 'add'; });
-
-      if (!isOpen) {
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.overflow = 'hidden';
-        icon.textContent = 'remove';
-      }
-    });
-  });
+  // FAQ Accordion - global fonksiyon
 
   // Results tab switcher
   function switchTab(tab) {
@@ -1186,7 +1182,7 @@
   });
 
   // Meeting Form — Supabase'e kaydet (form action ile yönlendir)
-  document.getElementById('meeting-form').addEventListener('submit', function(e) {
+  if(document.getElementById('meeting-form')) document.getElementById('meeting-form').addEventListener('submit', function(e) {
     const fields = this.querySelectorAll('input, textarea');
     const data = {
       name: fields[0].value,
