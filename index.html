@@ -103,6 +103,12 @@
   .faq-answer.open { max-height: 400px; }
   .mobile-menu { display: none; }
   .mobile-menu.open { display: flex; }
+  .result-img-wrap { overflow: hidden; height: 200px; }
+  .result-img-wrap img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top; }
+  @media(min-width: 768px) {
+    .result-img-wrap { height: auto; }
+    .result-img-wrap img { height: auto; object-fit: unset; object-position: unset; }
+  }
 </style>
 </head>
 <body class="font-body-md text-on-background bg-background selection:bg-secondary-fixed selection:text-on-secondary-fixed">
@@ -629,14 +635,14 @@
             <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
             <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 22.43x</span>
           </div>
-          <img src="meta-result-1.jpg" alt="Meta Ads Sonucu" style="width:100%;height:auto;display:block;"/>
+          <div class="result-img-wrap"><img src="meta-result-1.jpg" alt="Meta Ads Sonucu"/></div>
         </div>
         <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
           <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
             <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
             <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 7.67x</span>
           </div>
-          <img src="meta-result-2.jpg" alt="Meta Ads Sonucu" style="width:100%;height:auto;display:block;"/>
+          <div class="result-img-wrap"><img src="meta-result-2.jpg" alt="Meta Ads Sonucu"/></div>
           </div>
         </div>
       </div>
@@ -666,21 +672,21 @@
             <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bu Ay</span>
             <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">24.8Mn ₺</span>
           </div>
-          <img src="gads-1.jpg" alt="Google Ads Sonucu" style="width:100%;height:auto;display:block;"/>
+          <div class="result-img-wrap"><img src="gads-1.jpg" alt="Google Ads Sonucu"/></div>
         </div>
         <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
           <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
             <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Dün</span>
             <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">1.52Mn ₺</span>
           </div>
-          <img src="gads-2.jpg" alt="Google Ads Sonucu" style="width:100%;height:auto;display:block;"/>
+          <div class="result-img-wrap"><img src="gads-2.jpg" alt="Google Ads Sonucu"/></div>
         </div>
         <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
           <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
             <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bugün</span>
             <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">669B ₺</span>
           </div>
-          <img src="gads-3.jpg" alt="Google Ads Sonucu" style="width:100%;height:auto;display:block;"/>
+          <div class="result-img-wrap"><img src="gads-3.jpg" alt="Google Ads Sonucu"/></div>
         </div>
       </div>
     </div>
