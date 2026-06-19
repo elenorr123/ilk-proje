@@ -1280,7 +1280,7 @@ src="https://www.facebook.com/tr?id=1994951467985604&ev=PageView&noscript=1"
     // Calendly widget açılınca InitiateCheckout
     window.addEventListener('message', function(e) {
       if (e.data && e.data.event && e.data.event === 'calendly.event_type_viewed') {
-        sendCapiEvent('InitiateCheckout');
+        sendCapiEvent('Lead');
       }
       // Calendly toplantı zamanlandığında Schedule event
       if (e.data && e.data.event && e.data.event === 'calendly.event_scheduled') {
