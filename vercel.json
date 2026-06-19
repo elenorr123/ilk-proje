@@ -1,7 +1,5 @@
 {
-  "functions": {
-    "api/track.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "rewrites": [
+    { "source": "/api/track", "destination": "/api/track.js" }
+  ]
 }
