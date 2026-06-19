@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ilk-proje-eta.vercel.app/sitemap.xml
+Sitemap: https://www.mertesmer.com/sitemap.xml
