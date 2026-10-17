@@ -203,6 +203,183 @@ src="https://www.facebook.com/tr?id=1994951467985604&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- Results Section -->
+<section class="py-stack-lg bg-surface-bright border-b-4 border-primary" id="results">
+  <div class="max-w-[1100px] mx-auto px-margin-mobile md:px-margin-desktop">
+
+    <div class="text-center mb-12">
+      <h2 class="font-display text-headline-lg text-primary uppercase">Sonuçlar</h2>
+      <p class="text-on-surface-variant font-body-md mt-3">Gerçek kampanyalar. Gerçek veriler.</p>
+    </div>
+
+    <!-- Tab Switcher -->
+    <div class="flex justify-center gap-3 mb-10">
+      <button id="tab-meta" onclick="switchTab('meta')" class="results-tab-active flex items-center gap-2 px-5 py-2.5 border-2 border-primary font-label-bold text-sm transition-all" style="background:#0d0d0d;color:#fff;">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9 21.59 18.03 20.39 19.56 18.57C21.1 16.76 21.96 14.45 21.96 12.06C21.96 6.53 17.5 2.04 12 2.04Z" fill="#1877F2"/></svg>
+        Meta Ads
+      </button>
+      <button id="tab-google" onclick="switchTab('google')" class="flex items-center gap-2 px-5 py-2.5 border-2 border-primary font-label-bold text-sm transition-all bg-white text-primary">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Ads
+      </button>
+    </div>
+
+    <!-- META ADS PANEL -->
+    <div id="panel-meta">
+      <!-- Metrik Özet -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">22.43x</div>
+          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">ROAS<br/><span style="opacity:.6;">(Son 30 gün)</span></div>
+        </div>
+        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">₺1M+</div>
+          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm değeri<br/>(tek hesap)</div>
+        </div>
+        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">7.67x</div>
+          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">ROAS<br/><span style="opacity:.6;">(Farklı hesap)</span></div>
+        </div>
+        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">₺2.3M+</div>
+          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm değeri<br/>toplam</div>
+        </div>
+      </div>
+      <!-- Screenshot Kartları -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
+            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 22.43x</span>
+          </div>
+          <div class="result-img-wrap meta-img-wrap"><img src="meta-result-1.jpg" alt="Meta Ads Sonucu"/></div>
+        </div>
+        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
+            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 7.67x</span>
+          </div>
+          <div class="result-img-wrap meta-img-wrap"><img src="meta-result-2.jpg" alt="Meta Ads Sonucu"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOOGLE ADS PANEL -->
+    <div id="panel-google" style="display:none;">
+      <!-- Metrik Özet -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">24.8Mn ₺</div>
+          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">Bu ay dönüşüm değeri</div>
+        </div>
+        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">%8</div>
+          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm oranı</div>
+        </div>
+        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
+          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">1.52Mn ₺</div>
+          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Günlük dönüşüm değeri</div>
+        </div>
+      </div>
+      <!-- Screenshot Kartları -->
+      <div class="grid md:grid-cols-3 gap-5">
+        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bu Ay</span>
+            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">24.8Mn ₺</span>
+          </div>
+          <div class="result-img-wrap"><img src="gads-1.jpg" alt="Google Ads Sonucu"/></div>
+        </div>
+        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Dün</span>
+            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">1.52Mn ₺</span>
+          </div>
+          <div class="result-img-wrap"><img src="gads-2.jpg" alt="Google Ads Sonucu"/></div>
+        </div>
+        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bugün</span>
+            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">669B ₺</span>
+          </div>
+          <div class="result-img-wrap"><img src="gads-3.jpg" alt="Google Ads Sonucu"/></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gizlilik notu -->
+    <div class="mt-8 flex items-center gap-3 text-on-surface-variant">
+      <span class="material-symbols-outlined text-sm shrink-0" style="font-variation-settings:'FILL' 1;">lock</span>
+      <p class="text-xs font-body-md">Müşteri gizliliği kapsamında marka isimleri ve kişisel veriler gizlenmiştir. Ekran görüntüleri gerçek kampanya hesaplarına aittir.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Mail / SMS / Otomasyon Başarı Hikayesi -->
+<section class="border-b-4 border-primary" style="background-color:#0a1f0f;">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+
+    <div class="mb-14">
+      <div class="inline-block border-2 px-3 py-1 font-label-bold mb-4" style="border-color:#6bff8f;color:#6bff8f;">BAŞARI HİKAYESİ</div>
+      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg uppercase" style="color:#fff;">
+        Mail, SMS ve Otomasyon<br/><span style="color:#6bff8f;">Bir Arada Çalışınca</span>
+      </h2>
+      <p class="font-body-lg mt-4 max-w-2xl" style="color:#a0b8a4;">
+        Reklam tek başına yetmez. Gelen trafiği yakalamak, ısıtmak ve geri getirmek için sistematik bir yapı gerekir.
+      </p>
+    </div>
+
+    <!-- Before / After görseller -->
+    <div class="grid md:grid-cols-2 gap-8 mb-14">
+      <!-- ÖNCE -->
+      <div class="flex flex-col">
+        <div class="inline-flex items-center gap-2 px-4 py-2 font-label-bold text-sm mb-3 self-start border-4 border-primary" style="background:#ff4d4d;color:#fff;">
+          ✕ ÖNCE
+        </div>
+        <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#ff4d4d;">
+          <img src="oncesi.png" alt="Önce" class="w-full h-auto object-cover"/>
+        </div>
+      </div>
+      <!-- SONRA -->
+      <div class="flex flex-col">
+        <div class="inline-flex items-center gap-2 px-4 py-2 font-label-bold text-sm mb-3 self-start border-4 border-primary" style="background:#6bff8f;color:#000;">
+          ✓ SONRA
+        </div>
+        <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#6bff8f;">
+          <img src="sonrasi.png" alt="Sonra" class="w-full h-auto object-cover"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 adım -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">01 — Mail</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Ziyaretçi siteyi terk ettiğinde otomatik mail dizisi devreye giriyor. Sepet hatırlatma, ürün önerisi ve özel indirim akışı kuruldu.
+        </p>
+      </div>
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">02 — SMS</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Açılma oranı %98 olan SMS kanalıyla doğru zamanda doğru mesaj iletildi. Sepet terk oranı önemli ölçüde düştü.
+        </p>
+      </div>
+      <div class="border-2 p-6" style="border-color:#1e3a24;">
+        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">03 — Otomasyon</div>
+        <p class="font-body-md" style="color:#a0b8a4;">
+          Klaviyo üzerinde kurulan akışlar reklam trafiğini gelire dönüştürdü. Sistem artık 7/24 sizin yerinize çalışıyor.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- Hero Section -->
 <section class="grid-pattern py-stack-lg border-b-4 border-primary overflow-hidden">
   <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-12">
@@ -640,180 +817,7 @@ src="https://www.facebook.com/tr?id=1994951467985604&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- Results Section -->
-<section class="py-stack-lg bg-surface-bright border-b-4 border-primary" id="results">
-  <div class="max-w-[1100px] mx-auto px-margin-mobile md:px-margin-desktop">
 
-    <div class="text-center mb-12">
-      <h2 class="font-display text-headline-lg text-primary uppercase">Sonuçlar</h2>
-      <p class="text-on-surface-variant font-body-md mt-3">Gerçek kampanyalar. Gerçek veriler.</p>
-    </div>
-
-    <!-- Tab Switcher -->
-    <div class="flex justify-center gap-3 mb-10">
-      <button id="tab-meta" onclick="switchTab('meta')" class="results-tab-active flex items-center gap-2 px-5 py-2.5 border-2 border-primary font-label-bold text-sm transition-all" style="background:#0d0d0d;color:#fff;">
-        <svg viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9 21.59 18.03 20.39 19.56 18.57C21.1 16.76 21.96 14.45 21.96 12.06C21.96 6.53 17.5 2.04 12 2.04Z" fill="#1877F2"/></svg>
-        Meta Ads
-      </button>
-      <button id="tab-google" onclick="switchTab('google')" class="flex items-center gap-2 px-5 py-2.5 border-2 border-primary font-label-bold text-sm transition-all bg-white text-primary">
-        <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        Google Ads
-      </button>
-    </div>
-
-    <!-- META ADS PANEL -->
-    <div id="panel-meta">
-      <!-- Metrik Özet -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">22.43x</div>
-          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">ROAS<br/><span style="opacity:.6;">(Son 30 gün)</span></div>
-        </div>
-        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">₺1M+</div>
-          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm değeri<br/>(tek hesap)</div>
-        </div>
-        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">7.67x</div>
-          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">ROAS<br/><span style="opacity:.6;">(Farklı hesap)</span></div>
-        </div>
-        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">₺2.3M+</div>
-          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm değeri<br/>toplam</div>
-        </div>
-      </div>
-      <!-- Screenshot Kartları -->
-      <div class="grid md:grid-cols-2 gap-5">
-        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
-            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 22.43x</span>
-          </div>
-          <div class="result-img-wrap meta-img-wrap"><img src="meta-result-1.jpg" alt="Meta Ads Sonucu"/></div>
-        </div>
-        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Meta Ads — Kampanya Görünümü</span>
-            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">ROAS: 7.67x</span>
-          </div>
-          <div class="result-img-wrap meta-img-wrap"><img src="meta-result-2.jpg" alt="Meta Ads Sonucu"/></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GOOGLE ADS PANEL -->
-    <div id="panel-google" style="display:none;">
-      <!-- Metrik Özet -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-        <div style="background:#b9ff66;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">24.8Mn ₺</div>
-          <div style="font-size:12px;color:#0d0d0d;margin-top:6px;font-weight:600;">Bu ay dönüşüm değeri</div>
-        </div>
-        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">%8</div>
-          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Dönüşüm oranı</div>
-        </div>
-        <div style="background:#f3f3f3;border-radius:12px;" class="p-5">
-          <div style="font-size:28px;font-weight:900;color:#0d0d0d;line-height:1;">1.52Mn ₺</div>
-          <div style="font-size:12px;color:#555;margin-top:6px;font-weight:600;">Günlük dönüşüm değeri</div>
-        </div>
-      </div>
-      <!-- Screenshot Kartları -->
-      <div class="grid md:grid-cols-3 gap-5">
-        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bu Ay</span>
-            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">24.8Mn ₺</span>
-          </div>
-          <div class="result-img-wrap"><img src="gads-1.jpg" alt="Google Ads Sonucu"/></div>
-        </div>
-        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Dün</span>
-            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">1.52Mn ₺</span>
-          </div>
-          <div class="result-img-wrap"><img src="gads-2.jpg" alt="Google Ads Sonucu"/></div>
-        </div>
-        <div style="border:1.5px solid #e0e0e0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-          <div style="padding:10px 14px;border-bottom:1.5px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;gap:8px;">
-            <span style="font-size:12px;font-weight:700;color:#0d0d0d;">Google Ads — Bugün</span>
-            <span style="background:#b9ff66;padding:3px 10px;font-size:11px;font-weight:800;color:#0d0d0d;white-space:nowrap;border-radius:4px;">669B ₺</span>
-          </div>
-          <div class="result-img-wrap"><img src="gads-3.jpg" alt="Google Ads Sonucu"/></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gizlilik notu -->
-    <div class="mt-8 flex items-center gap-3 text-on-surface-variant">
-      <span class="material-symbols-outlined text-sm shrink-0" style="font-variation-settings:'FILL' 1;">lock</span>
-      <p class="text-xs font-body-md">Müşteri gizliliği kapsamında marka isimleri ve kişisel veriler gizlenmiştir. Ekran görüntüleri gerçek kampanya hesaplarına aittir.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Mail / SMS / Otomasyon Başarı Hikayesi -->
-<section class="border-b-4 border-primary" style="background-color:#0a1f0f;">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
-
-    <div class="mb-14">
-      <div class="inline-block border-2 px-3 py-1 font-label-bold mb-4" style="border-color:#6bff8f;color:#6bff8f;">BAŞARI HİKAYESİ</div>
-      <h2 class="font-display text-headline-lg-mobile md:text-headline-lg uppercase" style="color:#fff;">
-        Mail, SMS ve Otomasyon<br/><span style="color:#6bff8f;">Bir Arada Çalışınca</span>
-      </h2>
-      <p class="font-body-lg mt-4 max-w-2xl" style="color:#a0b8a4;">
-        Reklam tek başına yetmez. Gelen trafiği yakalamak, ısıtmak ve geri getirmek için sistematik bir yapı gerekir.
-      </p>
-    </div>
-
-    <!-- Before / After görseller -->
-    <div class="grid md:grid-cols-2 gap-8 mb-14">
-      <!-- ÖNCE -->
-      <div class="flex flex-col">
-        <div class="inline-flex items-center gap-2 px-4 py-2 font-label-bold text-sm mb-3 self-start border-4 border-primary" style="background:#ff4d4d;color:#fff;">
-          ✕ ÖNCE
-        </div>
-        <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#ff4d4d;">
-          <img src="oncesi.png" alt="Önce" class="w-full h-auto object-cover"/>
-        </div>
-      </div>
-      <!-- SONRA -->
-      <div class="flex flex-col">
-        <div class="inline-flex items-center gap-2 px-4 py-2 font-label-bold text-sm mb-3 self-start border-4 border-primary" style="background:#6bff8f;color:#000;">
-          ✓ SONRA
-        </div>
-        <div class="border-4 neo-brutal-shadow-lg overflow-hidden" style="border-color:#6bff8f;">
-          <img src="sonrasi.png" alt="Sonra" class="w-full h-auto object-cover"/>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3 adım -->
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="border-2 p-6" style="border-color:#1e3a24;">
-        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">01 — Mail</div>
-        <p class="font-body-md" style="color:#a0b8a4;">
-          Ziyaretçi siteyi terk ettiğinde otomatik mail dizisi devreye giriyor. Sepet hatırlatma, ürün önerisi ve özel indirim akışı kuruldu.
-        </p>
-      </div>
-      <div class="border-2 p-6" style="border-color:#1e3a24;">
-        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">02 — SMS</div>
-        <p class="font-body-md" style="color:#a0b8a4;">
-          Açılma oranı %98 olan SMS kanalıyla doğru zamanda doğru mesaj iletildi. Sepet terk oranı önemli ölçüde düştü.
-        </p>
-      </div>
-      <div class="border-2 p-6" style="border-color:#1e3a24;">
-        <div class="font-black text-headline-md mb-3" style="color:#6bff8f;">03 — Otomasyon</div>
-        <p class="font-body-md" style="color:#a0b8a4;">
-          Klaviyo üzerinde kurulan akışlar reklam trafiğini gelire dönüştürdü. Sistem artık 7/24 sizin yerinize çalışıyor.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- TESTIMONIALS REMOVED -->
 <section class="hidden" id="testimonials">
